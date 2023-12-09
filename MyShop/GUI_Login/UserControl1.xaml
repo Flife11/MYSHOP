@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="GUI_Login.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI_Login"
+             mc:Ignorable="d" 
+             
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            Background="{DynamicResource MaterialDesignPaper}"
+            TextElement.FontWeight="Medium"
+            TextElement.FontSize="14"
+            FontFamily="{materialDesign:MaterialDesignFont}"
+             
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <materialDesign:Card FontSize="20" Width="300" Height="300" >
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15 15 15 0"></Setter>
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <TextBox
+x:Name="Username"                        
+VerticalAlignment="Center"
+materialDesign:HintAssist.Hint="Tên đăng nhập"
+Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <PasswordBox
+x:Name="Password"
+materialDesign:HintAssist.Hint="Mật khẩu"
+Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <CheckBox x:Name="rememberMe" Content="Remember me" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Button
+Click="Login_CLick"                        
+Content="Đăng nhập"
+IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+Style="{StaticResource MaterialDesignPaperLightButton}"
+ToolTip="Resource name: MaterialDesignPaperLightButton" />
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Button
+Margin="0 -20 0 0"                        
+Width="100"
+Click="Config_Click"
+Content="Câu hình"
+IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+Style="{StaticResource MaterialDesignFlatLightButton}"
+ToolTip="MaterialDesignFlatLightButton" />
+                </Grid>
+
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>
