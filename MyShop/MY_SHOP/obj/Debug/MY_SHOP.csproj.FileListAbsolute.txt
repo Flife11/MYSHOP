@@ -35,3 +35,5 @@ D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Mat
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.xml
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Enity.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Enity.pdb

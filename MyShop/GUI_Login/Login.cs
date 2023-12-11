@@ -25,5 +25,10 @@ namespace GUI_Login
         {
             return new UserControl1(_bus);
         }
+
+        public override string Name()
+        {
+            return "login";
+        }
     }
 }

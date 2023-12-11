@@ -32,7 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,10 +47,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enity\Enity.csproj">
+      <Project>{09e8a055-d466-4cad-99f4-6c0cfeafe3ea}</Project>
+      <Name>Enity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThreeLayerContract\ThreeLayerContract.csproj">
       <Project>{C489B275-4D99-4E65-B0DB-B172944E6840}</Project>
       <Name>ThreeLayerContract</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

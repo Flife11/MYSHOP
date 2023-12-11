@@ -12,5 +12,6 @@ namespace ThreeLayerContract
         protected IBus _bus;
         public abstract UserControl GetMainWindow();
         public abstract IGUI CreateNew(IBus bus);
+        public abstract string Name();
     }
 }

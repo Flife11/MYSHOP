@@ -79,10 +79,25 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="config.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="configServer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Config.cs" />
+    <Compile Include="config.xaml.cs">
+      <DependentUpon>config.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="configServer.xaml.cs">
+      <DependentUpon>configServer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
@@ -114,6 +129,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enity\Enity.csproj">
+      <Project>{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}</Project>
+      <Name>Enity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThreeLayerContract\ThreeLayerContract.csproj">
       <Project>{C489B275-4D99-4E65-B0DB-B172944E6840}</Project>
       <Name>ThreeLayerContract</Name>
