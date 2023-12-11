@@ -13,7 +13,7 @@
             TextElement.FontSize="14"
             FontFamily="{materialDesign:MaterialDesignFont}"
              
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="Window_Loaded">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -43,14 +43,14 @@
                     <TextBox
 x:Name="Username"                        
 VerticalAlignment="Center"
-materialDesign:HintAssist.Hint="Tên đăng nhập"
+materialDesign:HintAssist.Hint="Username"
 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 </Grid>
 
                 <Grid Grid.Row="1">
                     <PasswordBox
 x:Name="Password"
-materialDesign:HintAssist.Hint="Mật khẩu"
+materialDesign:HintAssist.Hint="Password"
 Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
                 </Grid>
 
@@ -61,10 +61,8 @@ Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
                 <Grid Grid.Row="3">
                     <Button
 Click="Login_CLick"                        
-Content="Đăng nhập"
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-Style="{StaticResource MaterialDesignPaperLightButton}"
-ToolTip="Resource name: MaterialDesignPaperLightButton" />
+Content="Login"
+Style="{StaticResource MaterialDesignPaperLightButton}" />
                 </Grid>
 
                 <Grid Grid.Row="4">
@@ -72,10 +70,8 @@ ToolTip="Resource name: MaterialDesignPaperLightButton" />
 Margin="0 -20 0 0"                        
 Width="100"
 Click="Config_Click"
-Content="Câu hình"
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-Style="{StaticResource MaterialDesignFlatLightButton}"
-ToolTip="MaterialDesignFlatLightButton" />
+Content="Config"
+Style="{StaticResource MaterialDesignFlatLightButton}"/>
                 </Grid>
 
             </Grid>

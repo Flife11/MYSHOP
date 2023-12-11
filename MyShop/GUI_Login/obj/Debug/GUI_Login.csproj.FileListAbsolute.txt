@@ -31,3 +31,9 @@ D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\bin\Debug\C
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\bin\Debug\MahApps.Metro.pdb
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\bin\Debug\MahApps.Metro.xml
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\bin\Debug\MaterialDesignThemes.MahApps.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\bin\Debug\Enity.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\bin\Debug\Enity.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\config.g.cs
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\configServer.g.cs
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\config.baml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\configServer.baml

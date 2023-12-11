@@ -63,9 +63,33 @@ namespace MY_SHOP
                 }
             }
 
-            IGUI gui = guis[0] as IGUI;
-            IBus bus = buses[0] as IBus;
-            IDAO dao = daos[0] as IDAO;
+            IGUI gui = null;
+            foreach (var g in guis)
+            {
+                if (g.Name()=="login")
+                {
+                    gui = g as IGUI;
+                    break;
+                }
+            }
+            IBus bus = null;
+            foreach (var b in buses)
+            {
+                if (b.Name() == "login")
+                {
+                    bus = b as IBus;
+                    break;
+                }
+            }
+            IDAO dao = null;
+            foreach (var d in daos)
+            {
+                if (d.Name() == "login")
+                {
+                    dao = d as IDAO;
+                    break;
+                }
+            }
 
             bus = bus.CreateNew(dao);
             gui = gui.CreateNew(bus);
