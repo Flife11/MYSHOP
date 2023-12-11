@@ -2144,19 +2144,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\THUC\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
+      "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\Project\\MYSHOP\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
       "projectName": "GUI_Navbar",
-      "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
-      "packagesPath": "C:\\Users\\THUC\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\obj\\",
+      "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\Project\\MYSHOP\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\Project\\MYSHOP\\MyShop\\GUI_Navbar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
