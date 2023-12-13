@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MY_SHOP", "MY_SHOP\MY_SHOP.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enity", "Enity\Enity.csproj", "{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_DashBoard", "GUI_DashBoard\GUI_DashBoard.csproj", "{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}.Release|x64.Build.0 = Release|Any CPU
 		{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}.Release|x86.Build.0 = Release|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Debug|x64.Build.0 = Debug|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Debug|x86.Build.0 = Debug|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Release|x64.ActiveCfg = Release|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Release|x64.Build.0 = Release|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Release|x86.ActiveCfg = Release|Any CPU
+		{2177D2A6-4E8B-4AE0-8EBD-69B3B2A6F4CB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

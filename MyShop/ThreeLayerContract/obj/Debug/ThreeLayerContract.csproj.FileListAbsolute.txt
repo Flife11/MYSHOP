@@ -4,3 +4,9 @@ D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\ob
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.csproj.CoreCompileInputs.cache
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.dll
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.pdb
+D:\Workspace\Window\MYSHOP\MyShop\ThreeLayerContract\bin\Debug\ThreeLayerContract.dll
+D:\Workspace\Window\MYSHOP\MyShop\ThreeLayerContract\bin\Debug\ThreeLayerContract.pdb
+D:\Workspace\Window\MYSHOP\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.csproj.AssemblyReference.cache
+D:\Workspace\Window\MYSHOP\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.csproj.CoreCompileInputs.cache
+D:\Workspace\Window\MYSHOP\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.dll
+D:\Workspace\Window\MYSHOP\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.pdb
