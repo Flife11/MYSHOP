@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Order"
         mc:Ignorable="d"
-        Title="AddOrderWindow" Height="500" Width="800" Loaded="OrderWindow_Load" >
+        Title="AddOrderWindow" Height="600" Width="1000" Loaded="OrderWindow_Load" >
     <Grid>
         <!-- Cột đầu tiên chiếm 40% chiều rộng -->
         <Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="300" Height="250" Name="listProductOfType" SelectionChanged="SelectProduct" >
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="300" Height="350" Name="listProductOfType" SelectionChanged="SelectProduct" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel VerticalAlignment="Center" Width="250" Height="80"  Orientation="Horizontal">
@@ -65,29 +65,61 @@
         <!-- Cột thứ hai sẽ chiếm phần còn lại của chiều rộng -->
         <StackPanel Grid.Column="1">
             <!-- Nội dung của cột thứ hai -->
-            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="400" Height="300" Name="listProductOfOrder" Margin="0,10,0,0">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel VerticalAlignment="Center" Width="350" Height="100"  Orientation="Horizontal">
-                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding ImageUrl}" Width="60" Height="100" Margin="5" />
-                            <StackPanel Orientation="Vertical" Height="80" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <StackPanel  Orientation="Horizontal" Margin="5" VerticalAlignment="Center" >
-                                    <TextBlock Text="Name:" Margin="0,0,5,0"></TextBlock>
-                                    <TextBlock Text="{Binding Title}" TextWrapping="Wrap"/>
-                                </StackPanel>
-                                <StackPanel  Orientation="Horizontal" Margin="5" VerticalAlignment="Center" >
-                                    <TextBlock Text="Price:" Margin="0,0,5,0"></TextBlock>
-                                    <TextBlock Text="{Binding Price}"/>
-                                </StackPanel>
-                                <StackPanel  Orientation="Horizontal" Margin="5" VerticalAlignment="Center" >
-                                    <TextBlock Text="Quantity:" Margin="0,0,5,0"></TextBlock>
-                                    <TextBlock Text="{Binding Availability}"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </StackPanel>
-                     
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="400" Height="400" Name="listProductOfOrder" Margin="0,10,0,0">
+
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Image" Width="100">
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding ImageUrl}" Width="50" Height="80" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Title"  Width="150">
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock  Width="150" Text="{Binding Title}" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Quantity" Width="50">
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Width="50" Text="{Binding Availability}" TextAlignment="Center" HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Price" Width="100">
+                            <GridViewColumn.HeaderContainerStyle>
+                                <Style TargetType="{x:Type GridViewColumnHeader}">
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </GridViewColumn.HeaderContainerStyle>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock  Width="90" Text="{Binding Price}" TextWrapping="Wrap"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <!-- Thêm các cột khác nếu cần -->
+                    </GridView>
+                </ListView.View>
             </ListView>
             <Grid Margin="0,10,0,0">
                 <Grid.ColumnDefinitions>
@@ -122,7 +154,7 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="20"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Content="Delete Order" Grid.Column="1" Click="DeleteOrderClick"></Button>
+                <Button Content="Back" Grid.Column="1" Click="BackClick"></Button>
                 <Button Content="Save Order" Grid.Column="4" Click="SaveOrderClick"></Button>
             </Grid>
         </StackPanel>

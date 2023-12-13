@@ -8,23 +8,9 @@
         
         xmlns:local="clr-namespace:Order"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="OrderWindow_Loaded">
+        Title="MainWindow" Height="850" Width="1200" Loaded="OrderWindow_Loaded">
     <DockPanel>
-        <!-- StackPanel placed at the Left of DockPanel -->
-        <materialDesign:ColorZone Padding="8"
-                               Background="White"
-                               CornerRadius="4"
-                               VerticalAlignment="Stretch"
-                               materialDesign:ShadowAssist.ShadowDepth="Depth3">
-            <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1,1,1,1">
-                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <!-- Your content here -->
-                    <Button Content="Button 1"/>
-                    <Button Content="Button 2"/>
-                    <!-- ... -->
-                </StackPanel>
-            </Border>
-        </materialDesign:ColorZone>
+        
         <!-- StackPanel placed at the Top of DockPanel -->
         <Grid DockPanel.Dock="Top" Height="100">
             <Grid.ColumnDefinitions>
@@ -41,9 +27,9 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Từ ngày"  Grid.Column="3" Grid.Row="0" ></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="From"  Grid.Column="3" Grid.Row="0" ></TextBlock>
             <DatePicker x:Name="dateFrom" Grid.Column="3" Grid.Row="1" Margin="5,0,0,0"/>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="Dến ngày"  Grid.Column="4" Grid.Row="0" ></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="To"  Grid.Column="4" Grid.Row="0" ></TextBlock>
             <DatePicker x:Name="dateTo" Grid.Column="4" Grid.Row="1" Margin="5,0,0,0"/>
             <Button Grid.Column="5" Grid.Row="1" Margin="5,0,0,0" Width="60" Click="SearchOrder">
                 <materialDesignPack:PackIcon Kind="Magnify" VerticalAlignment="Center" Margin="5"/>
@@ -58,7 +44,8 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-
+            <Button Grid.Column="6" Grid.Row="1" Click="ViewDetailOrder" Content="Detail">
+            </Button>
         </Grid>
         <!-- StackPanel placed in the Center of DockPanel -->
         <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1,1,1,1">
@@ -77,35 +64,76 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
 
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="2" Width="60">
+                        <Button Grid.Column="2" Width="60" Click="PreviousPageClick" Name="previousPage">
                             <materialDesignPack:PackIcon Kind="ChevronDoubleLeft"/>
                         </Button>
-                        <Button Grid.Column="4" Width="60">
+                        <Button Grid.Column="4" Width="60"  Click="NextPageClick">
                             <materialDesignPack:PackIcon Kind="ChevronDoubleRight"/>
                         </Button>
+                        <TextBlock Grid.Column="3"  HorizontalAlignment="Center" VerticalAlignment="Center" Name="nextPage">
+                            <Run Text="{Binding _currentPage}" /><Run Text=" / " /><Run Text="{Binding  _pageSize}" />
+                        </TextBlock>
                     </Grid>
 
                 </Border>
 
                 <Border BorderBrush="{DynamicResource MaterialDesignDivider}" BorderThickness="1,1,1,1" >
-                    <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="280" Name="listOrder" Margin="0,10,0,0">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="{Binding Id}" HorizontalAlignment="Center" Grid.Column="0" Margin="5"></TextBlock>
-                                    <TextBlock Text="{Binding Date}" HorizontalAlignment="Center"  Grid.Column="1" Margin="5"></TextBlock>
-                                    <TextBlock Text="{Binding Quantity}" HorizontalAlignment="Center"  Grid.Column="2" Margin="5"></TextBlock>
-                                    <TextBlock Text="{Binding Price}" HorizontalAlignment="Center"  Grid.Column="3" Margin="5"></TextBlock>
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
+                    <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="600" Width="750"  Name="listOrder" Margin="0,10,0,0" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Id" Width="100">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Width="100" Text="{Binding Id}" TextAlignment="Center"  HorizontalAlignment="Center"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Date Time"  Width="200">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock  Width="200" Text="{Binding Date}" TextAlignment="Center" HorizontalAlignment="Center"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Quantity" Width="150">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Width="150" Text="{Binding Quantity}" TextAlignment="Center" HorizontalAlignment="Center"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Total Price" Width="300">
+                                    <GridViewColumn.HeaderContainerStyle>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                        </Style>
+                                    </GridViewColumn.HeaderContainerStyle>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock  Width="300" Text="{Binding Price}" TextAlignment="Center" HorizontalAlignment="Center"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <!-- Thêm các cột khác nếu cần -->
+                            </GridView>
+                        </ListView.View>
                     </ListView>
+
                 </Border>
 
             </DockPanel>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GUI_Navbar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2d5f24c4bf8e228a539dda9f2e8a5e58a91fc70")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+380839f6e4ce8ac039983252d722ccdfb27a366e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GUI_Navbar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GUI_Navbar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

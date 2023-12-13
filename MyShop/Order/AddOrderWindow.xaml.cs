@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -32,6 +33,11 @@ namespace Order
         public double _totalPrice = 0;
         private void addProDuctToOrder(object sender, RoutedEventArgs e)
         {
+            if(listProductOfType.SelectedItem==null)
+            {
+                MessageBox.Show("Lỗi: Vui lòng chọn Book", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             Book _book = BookSelected.Clone();
             string _amount = amountBook.Text;
             if(int.TryParse(_amount, out int result))
@@ -75,8 +81,7 @@ namespace Order
                 Quantity = sumQuantity,
                 Price = _totalPrice
             };
-
-            MainWindow._listOrder.Add(_order);
+            insertOrder(_date,_order);
             Close();
         }
         public void OrderWindow_Load(object sender, RoutedEventArgs e)
@@ -84,7 +89,7 @@ namespace Order
             getListCateGory();
             TotalPrice.Text=_totalPrice.ToString();
         }
-        private void DeleteOrderClick(object sender, RoutedEventArgs e)
+        private void BackClick(object sender, RoutedEventArgs e)
         {
             Close();
         }
@@ -188,7 +193,7 @@ namespace Order
 
                                     _bookList.Add(book);
                                 }
-                                System.Threading.Thread.Sleep(500);
+                                System.Threading.Thread.Sleep(1000);
                                 return _bookList;
                             }
                         }
@@ -226,6 +231,96 @@ namespace Order
                 _orderBooks.Remove( _book );
                 _totalPrice =_totalPrice- _book.Price * _book.Availability;
                 TotalPrice.Text= _totalPrice.ToString();
+            }
+        }
+        private async void insertOrder(string _date, ElementOrder _order)
+        {
+            string connectionString = "Server=LAPTOP-K39M1QD9;Database=MyShop;Trusted_Connection=yes;TrustServerCertificate=True;";
+            SqlConnection connection = null;
+            try
+            {
+                var orderID = await Task.Run(() =>
+                {
+                    using (connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Lấy giá trị ID mới
+                        int newId = GetNextId(connection, "[Order]", "ID");
+
+                        string insertQuery = "INSERT INTO [Order] (ID,Date) OUTPUT INSERTED.ID VALUES (@Value1,@Value2)";
+                        int insertedId;
+                        using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                        {
+                            // Thêm các tham số cho truy vấn
+                            command.Parameters.AddWithValue("@Value2", $"{_date}");
+                            command.Parameters.AddWithValue("@Value1", $"{newId}");
+
+                            // Lấy giá trị ID vừa được insert
+                            insertedId = (int)command.ExecuteScalar();
+
+                           
+                        }
+                        foreach (Book _book in _orderBooks)
+                        {
+                            insertOrderDetail(connection, _book, insertedId);
+                        }
+                        return insertedId;
+                    }
+                });
+                _order.Id = orderID;
+
+
+                MainWindow._listOrder.Insert(0, _order);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi truy vấn: {ex.Message}");
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối được đóng ngay cả khi có ngoại lệ
+                if (connection != null && connection.State == System.Data.ConnectionState.Open)
+                {
+                    connection.Close();
+                    Console.WriteLine("Kết nối đã được đóng.");
+                }
+            }
+        }
+        public int GetNextId(SqlConnection connection, string tableName, string idColumnName)
+        {
+            // Tìm giá trị ID lớn nhất hiện tại trong bảng
+            string maxIdQuery = $"SELECT MAX({idColumnName}) FROM {tableName}";
+            using (SqlCommand maxIdCommand = new SqlCommand(maxIdQuery, connection))
+            {
+                object maxId = maxIdCommand.ExecuteScalar();
+                int nextId = (maxId == DBNull.Value) ? 1 : ((int)maxId + 1);
+                return nextId;
+            }
+        }
+        public void insertOrderDetail(SqlConnection connection, Book _book,int IDOrder)
+        {
+            string insertQuery = "INSERT INTO [OrderDetail] (ID,[Order],Book,Quantity) VALUES (@Value1,@Value2,@Value3,@Value4)";
+            using (SqlCommand command = new SqlCommand(insertQuery, connection))
+            {
+                // Thêm các tham số cho truy vấn
+                int insertedId = GetNextId(connection, "OrderDetail", "ID");
+                command.Parameters.AddWithValue("@Value1", $"{insertedId}");
+                command.Parameters.AddWithValue("@Value2", $"{IDOrder}");
+                command.Parameters.AddWithValue("@Value3", $"{_book.Id}");
+                command.Parameters.AddWithValue("@Value4", $"{_book.Availability}");
+
+                // Lấy giá trị ID vừa được insert
+                command.ExecuteScalar();
+
+                // Sử dụng giá trị ID nếu cần
+            }
+            string updateQuery = $"Update book\r\nset Availability= Availability - {_book.Availability}\r\nwhere ID={_book.Id}";
+
+            using (SqlCommand command = new SqlCommand(updateQuery, connection))
+            {
+                command.ExecuteNonQuery();
             }
         }
     }
