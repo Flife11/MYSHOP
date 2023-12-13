@@ -80,7 +80,7 @@ namespace GUI_Navbar {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GUI_Navbar;component/navbar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GUI_Navbar;V1.0.0.0;component/navbar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Navbar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
