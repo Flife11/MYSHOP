@@ -95,38 +95,31 @@ namespace Order
         }
         private async void getListCateGory()
         {
-            string connectionString = "Server=LAPTOP-K39M1QD9;Database=MyShop;Trusted_Connection=yes;TrustServerCertificate=True;";
-            SqlConnection connection = null;
+           
             try
             {
                 var categories = await Task.Run(() =>
                 {
-                    using (connection = new SqlConnection(connectionString))
+                    string query = "SELECT * FROM Category";
+                    using (var command = new SqlCommand(query, MainWindow.connection))
                     {
-                        connection.Open();
-
-                        // Thực hiện truy vấn SQL để lấy các dòng của bảng Shop với Price = 2
-                        string query = "SELECT * FROM Category";
-                        using (var command = new SqlCommand(query, connection))
+                        using (var reader = command.ExecuteReader())
                         {
-                            using (var reader = command.ExecuteReader())
+                            var _cateList = new List<Category>();
+
+                            while (reader.Read())
                             {
-                                var _cateList = new List<Category>();
-
-                                while (reader.Read())
+                                var category = new Category
                                 {
-                                    var category = new Category
-                                    {
-                                        Id = (int)reader["ID"],
-                                        Name = reader["Name"].ToString(),
-                                        // Gán các thuộc tính khác của bảng Shop tương ứng
-                                    };
+                                    Id = (int)reader["ID"],
+                                    Name = reader["Name"].ToString(),
+                                    // Gán các thuộc tính khác của bảng Shop tương ứng
+                                };
 
-                                    _cateList.Add(category);
-                                }
-
-                                return _cateList;
+                                _cateList.Add(category);
                             }
+
+                            return _cateList;
                         }
                     }
                 });
@@ -138,15 +131,7 @@ namespace Order
             {
                 MessageBox.Show($"Lỗi truy vấn: {ex.Message}");
             }
-            finally
-            {
-                // Đảm bảo rằng kết nối được đóng ngay cả khi có ngoại lệ
-                if (connection != null && connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                    Console.WriteLine("Kết nối đã được đóng.");
-                }
-            }
+           
         }
 
         private async void LoadListProductWithCategory(object sender, SelectionChangedEventArgs e)
@@ -158,44 +143,37 @@ namespace Order
             Category _category= (Category)dropBoxTypeBook.SelectedItem;
             string _nameCategory=_category.Name;
 
-            string connectionString = "Server=LAPTOP-K39M1QD9;Database=MyShop;Trusted_Connection=yes;TrustServerCertificate=True;";
-            SqlConnection connection = null;
+           
             try
             {
                 var books = await Task.Run(() =>
                 {
-                    using (connection = new SqlConnection(connectionString))
+                    string query = $"SELECT  Id, Title, Category, Image,Availability,Price  FROM book Where Category = '{_nameCategory}' ";
+                    using (var command = new SqlCommand(query, MainWindow.connection))
                     {
-                        connection.Open();
-
-                        // Thực hiện truy vấn SQL để lấy các dòng của bảng Shop với Price = 2
-                        string query = $"SELECT  Id, Title, Category, Image,Availability,Price  FROM book Where Category = '{_nameCategory}' ";
-                        using (var command = new SqlCommand(query, connection))
+                        using (var reader = command.ExecuteReader())
                         {
-                            using (var reader = command.ExecuteReader())
+                            var _bookList = new BindingList<Book>();
+
+                            while (reader.Read())
                             {
-                                var _bookList = new BindingList<Book>();
 
-                                while (reader.Read())
+                                var book = new Book
                                 {
-                                    
-                                    var book = new Book
-                                    {
-                                        Id = (int)reader["ID"],
-                                        Availability = (int)reader["Availability"],
-                                        Price = (double)reader["Price"],
-                                        Title = reader["Title"].ToString(),
-                                        // Gán các thuộc tính khác của bảng Shop tương ứng
-                                        Category = reader["Category"].ToString(),
-                                        ImageUrl = reader["Image"].ToString(),
+                                    Id = (int)reader["ID"],
+                                    Availability = (int)reader["Availability"],
+                                    Price = (double)reader["Price"],
+                                    Title = reader["Title"].ToString(),
+                                    // Gán các thuộc tính khác của bảng Shop tương ứng
+                                    Category = reader["Category"].ToString(),
+                                    ImageUrl = reader["Image"].ToString(),
 
-                                    };
+                                };
 
-                                    _bookList.Add(book);
-                                }
-                                System.Threading.Thread.Sleep(1000);
-                                return _bookList;
+                                _bookList.Add(book);
                             }
+                            System.Threading.Thread.Sleep(1000);
+                            return _bookList;
                         }
                     }
                 });
@@ -207,15 +185,7 @@ namespace Order
             {
                 MessageBox.Show($"Lỗi truy vấn: {ex.Message}");
             }
-            finally
-            {
-                // Đảm bảo rằng kết nối được đóng ngay cả khi có ngoại lệ
-                if (connection != null && connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                    Console.WriteLine("Kết nối đã được đóng.");
-                }
-            }
+           
         }
         private void SelectProduct(object sender, SelectionChangedEventArgs e)
         {
@@ -235,38 +205,32 @@ namespace Order
         }
         private async void insertOrder(string _date, ElementOrder _order)
         {
-            string connectionString = "Server=LAPTOP-K39M1QD9;Database=MyShop;Trusted_Connection=yes;TrustServerCertificate=True;";
-            SqlConnection connection = null;
+           
             try
             {
                 var orderID = await Task.Run(() =>
                 {
-                    using (connection = new SqlConnection(connectionString))
+                    // Lấy giá trị ID mới
+                    int newId = GetNextId(MainWindow.connection, "[Order]", "ID");
+
+                    string insertQuery = "INSERT INTO [Order] (ID,Date) OUTPUT INSERTED.ID VALUES (@Value1,@Value2)";
+                    int insertedId;
+                    using (SqlCommand command = new SqlCommand(insertQuery, MainWindow. connection))
                     {
-                        connection.Open();
+                        // Thêm các tham số cho truy vấn
+                        command.Parameters.AddWithValue("@Value2", $"{_date}");
+                        command.Parameters.AddWithValue("@Value1", $"{newId}");
 
-                        // Lấy giá trị ID mới
-                        int newId = GetNextId(connection, "[Order]", "ID");
+                        // Lấy giá trị ID vừa được insert
+                        insertedId = (int)command.ExecuteScalar();
 
-                        string insertQuery = "INSERT INTO [Order] (ID,Date) OUTPUT INSERTED.ID VALUES (@Value1,@Value2)";
-                        int insertedId;
-                        using (SqlCommand command = new SqlCommand(insertQuery, connection))
-                        {
-                            // Thêm các tham số cho truy vấn
-                            command.Parameters.AddWithValue("@Value2", $"{_date}");
-                            command.Parameters.AddWithValue("@Value1", $"{newId}");
 
-                            // Lấy giá trị ID vừa được insert
-                            insertedId = (int)command.ExecuteScalar();
-
-                           
-                        }
-                        foreach (Book _book in _orderBooks)
-                        {
-                            insertOrderDetail(connection, _book, insertedId);
-                        }
-                        return insertedId;
                     }
+                    foreach (Book _book in _orderBooks)
+                    {
+                        insertOrderDetail(MainWindow.connection, _book, insertedId);
+                    }
+                    return insertedId;
                 });
                 _order.Id = orderID;
 
@@ -278,15 +242,7 @@ namespace Order
             {
                 MessageBox.Show($"Lỗi truy vấn: {ex.Message}");
             }
-            finally
-            {
-                // Đảm bảo rằng kết nối được đóng ngay cả khi có ngoại lệ
-                if (connection != null && connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                    Console.WriteLine("Kết nối đã được đóng.");
-                }
-            }
+           
         }
         public int GetNextId(SqlConnection connection, string tableName, string idColumnName)
         {
