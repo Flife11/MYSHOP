@@ -1,19 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Order
 {
-    public class Book
+    public class Book:INotifyPropertyChanged
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Category { get; set; }
-        public string ImageUrl { get; set; }
-        public int Availability { get; set; }
-        public double Price {  get; set; }
+        private int id;
+        private string title;
+        private string category;
+        private string imgurl;
+        private int availability;
+        private double price;
+        public int Id {
+            get { return id; } 
+            set { SetProperty(ref id, value); }
+
+        }
+        public string Title { 
+            get { return title; }
+            set { SetProperty(ref title, value);}
+        }
+        public string Category { 
+            set { SetProperty(ref category, value); }
+            get { return category; }
+        }
+        public string ImageUrl { 
+            get { return imgurl; }
+            set { SetProperty(ref imgurl, value); }
+        }
+        public int Availability { 
+            get { return availability; }
+            set { SetProperty(ref availability, value); }
+        }
+        public double Price {  
+            set { SetProperty(ref price, value); }
+            get { return price; }
+        }
         public Book()
         {
             Id= 0;
@@ -38,6 +65,20 @@ namespace Order
         public Book Clone()
         {
             return new Book(Id, Title, Category, ImageUrl, Availability, Price);
+        }
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        protected bool SetProperty<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(field, value)) return false;
+
+            field = value;
+            OnPropertyChanged(propertyName);
+            return true;
         }
     }
 }

@@ -10,12 +10,18 @@
     <Compile Update="AddOrderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EditOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="OrderInformationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="AddOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditOrderWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

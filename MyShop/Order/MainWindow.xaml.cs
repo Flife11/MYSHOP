@@ -388,13 +388,14 @@ namespace Order
             }
         }
 
-
+        public static int index = 0;
         private void ViewDetailOrder(object sender, RoutedEventArgs e)
         {
             if(listOrder.SelectedItem!=null)
             {
                 ElementOrder _order= (ElementOrder)listOrder.SelectedItem;
                 OrderInformationWindow _detailOrder = new OrderInformationWindow(_order);
+                index = (int)listOrder.SelectedIndex;
                 bool? _bool = _detailOrder.ShowDialog();
                 if (_bool != null)
                 {

@@ -79,5 +79,56 @@ namespace Order
             }
             
         }
+
+        private async void DeleteOrder(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var _bookOrder = await Task.Run(() =>
+                {
+                    // Thực hiện truy vấn SQL để lấy các dòng của bảng Shop với Price = 2
+                    string query = $"delete from OrderDetail where OrderDetail.[Order]='{_order.Id}'";
+                    using (SqlCommand command = new SqlCommand(query, MainWindow.connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    return 1;
+                });
+
+                var _deleteOrder = await Task.Run(() =>
+                {
+                    // Thực hiện truy vấn SQL để lấy các dòng của bảng Shop với Price = 2
+                    string query = $"delete from [Order] where [Order].ID='{_order.Id}'";
+                    using (SqlCommand command = new SqlCommand(query, MainWindow.connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    return 1;
+                });
+
+                MainWindow._listOrder.Remove(_order);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi truy vấn: {ex.Message}");
+            }
+            
+        }
+
+        private void EditOrderClick(object sender, RoutedEventArgs e)
+        {
+            EditOrderWindow _editWindow = new EditOrderWindow(_order);
+            bool? _bool = _editWindow.ShowDialog();
+            this.Close();
+            if (_bool != null)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
     }
 }
