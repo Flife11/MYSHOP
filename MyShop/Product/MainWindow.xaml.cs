@@ -627,6 +627,7 @@ namespace Product
 
                 screen.editBook.CopyProperties(book);
                 selectBookByCategory(_categoryName);
+                //comment
             }
             else
             {
