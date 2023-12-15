@@ -12,11 +12,10 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\THUC\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\THUC\\.nuget\\packages"
+      "C:\\Users\\this pc\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\this pc\\.nuget\\packages"
     ],
     "configProperties": {
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

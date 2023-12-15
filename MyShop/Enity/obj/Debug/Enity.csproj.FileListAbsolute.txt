@@ -4,3 +4,9 @@ D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.csproj.CoreCompileInputs.cache
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.dll
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\Enity\bin\Debug\Enity.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\Enity\bin\Debug\Enity.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\Enity\obj\Debug\Enity.csproj.AssemblyReference.cache
+C:\Users\this pc\source\repos\MYSHOP\MyShop\Enity\obj\Debug\Enity.csproj.CoreCompileInputs.cache
+C:\Users\this pc\source\repos\MYSHOP\MyShop\Enity\obj\Debug\Enity.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\Enity\obj\Debug\Enity.pdb

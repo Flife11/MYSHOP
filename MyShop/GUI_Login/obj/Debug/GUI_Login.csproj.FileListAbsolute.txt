@@ -37,3 +37,42 @@ D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\c
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\configServer.g.cs
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\config.baml
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\GUI_Login\obj\Debug\configServer.baml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\GUI_Login.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\GUI_Login.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\ControlzEx.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\Enity.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MahApps.Metro.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignColors.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\ShowMeTheXAML.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\ThreeLayerContract.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\Enity.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\ThreeLayerContract.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\ControlzEx.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\ControlzEx.xml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MahApps.Metro.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MahApps.Metro.xml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignColors.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignThemes.MahApps.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.csproj.AssemblyReference.cache
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\config.g.cs
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\configServer.g.cs
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\UserControl1.g.cs
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login_MarkupCompile.cache
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login_MarkupCompile.lref
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\config.baml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\configServer.baml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\UserControl1.baml
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.g.resources
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.Properties.Resources.resources
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.csproj.GenerateResource.cache
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.csproj.CoreCompileInputs.cache
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.csproj.CopyComplete
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.dll
+C:\Users\this pc\source\repos\MYSHOP\MyShop\GUI_Login\obj\Debug\GUI_Login.pdb
