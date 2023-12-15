@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h3YkenTjmGBq52yikThIh5uAtKVXQ7jXsJI1uPwNTSqO2xeKpI52wUVKUuSLwwjS19JBBuo6+GPqQ1Q+Eb2olw==",
+  "dgSpecHash": "TUoQVGAG6kKc+0kdEWl4F6NonK6d/0zXibG6/ThpyC52tYVhA/FCS1oszhDYwNihR5fEKtm+U38bz6XO5BWKrQ==",
   "success": true,
-  "projectFilePath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
+  "projectFilePath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\THUC\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\THUC\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Enity;
+using Microsoft.Data.SqlClient;
 using System.ComponentModel;
 using System.Text;
 using System.Windows;
@@ -67,7 +68,7 @@ namespace Order
         public static SqlConnection connection = null;
         private async void OrderWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            string connectionString = "Server=LAPTOP-K39M1QD9;Database=MyShop;Trusted_Connection=yes;TrustServerCertificate=True;";
+            string connectionString = DB.Instance.ConnectionString;
             connection = new SqlConnection(connectionString);
             connection.Open();
 

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj": {}
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj": {}
   },
   "projects": {
     "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Enity.csproj": {
@@ -23,14 +23,14 @@
         "net472": {}
       }
     },
-    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj": {
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
-        "projectName": "Order",
-        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
+        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj",
+        "projectName": "Product",
+        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj",
         "packagesPath": "C:\\Users\\THUC\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\obj\\",
+        "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,6 +63,10 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "MaterialDesignColors": {
               "target": "Package",
               "version": "[2.1.4, )"
@@ -71,9 +75,17 @@
               "target": "Package",
               "version": "[4.9.0, )"
             },
-            "Microsoft.Data.SqlClient": {
+            "MaterialDesignThemes.MahApps": {
               "target": "Package",
-              "version": "[5.1.2, )"
+              "version": "[0.3.0, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [

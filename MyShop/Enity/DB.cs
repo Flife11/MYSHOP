@@ -9,8 +9,7 @@ namespace Enity
 {
     public class DB
     {
-        private static DB _instance = null;
-        public bool Connect = false;
+        private static DB _instance = null;        
         private SqlConnection _connection = null;
 
         public SqlConnection Connection
@@ -26,8 +25,7 @@ namespace Enity
                 return _connection;
             }
         }      
-
-        public bool isConnected() { return Connect; }
+     
         public string ConnectionString { get; set; } = "";
 
 

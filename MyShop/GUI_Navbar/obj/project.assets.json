@@ -760,27 +760,6 @@
             "rid": "win"
           }
         }
-      },
-      "Enity/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "ThreeLayerContract": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Enity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Enity.dll": {}
-        }
-      },
-      "ThreeLayerContract/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/ThreeLayerContract.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ThreeLayerContract.dll": {}
-        }
       }
     }
   },
@@ -2155,21 +2134,10 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Enity/1.0.0": {
-      "type": "project",
-      "path": "../Enity/Enity.csproj",
-      "msbuildProject": "../Enity/Enity.csproj"
-    },
-    "ThreeLayerContract/1.0.0": {
-      "type": "project",
-      "path": "../ThreeLayerContract/ThreeLayerContract.csproj",
-      "msbuildProject": "../ThreeLayerContract/ThreeLayerContract.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
-      "Enity >= 1.0.0",
       "MaterialDesignColors >= 2.1.4",
       "MaterialDesignThemes >= 4.9.0",
       "Microsoft.Data.SqlClient >= 5.1.2"
@@ -2181,11 +2149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
-      "projectName": "Order",
-      "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
+      "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
+      "projectName": "GUI_Navbar",
+      "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\GUI_Navbar.csproj",
       "packagesPath": "C:\\Users\\THUC\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\obj\\",
+      "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\GUI_Navbar\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2201,11 +2169,7 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {
-            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Enity.csproj": {
-              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Enity.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

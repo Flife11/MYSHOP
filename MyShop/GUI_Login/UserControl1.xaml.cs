@@ -38,15 +38,15 @@ namespace GUI_Login
             string password = Password.Password;
             bool? remember = rememberMe.IsChecked;
 
-
             _bus.ConnectDB(userName, password);
-            if (DB.Instance.isConnected())
-            {
-                MessageBox.Show("Success");
+            if (DB.Instance.ConnectionString!=null)
+            {                
                 if (remember==true)
                 {
                     _bus.SaveUserToConfig(userName, password);
                 }
+                Window parentWindow = Window.GetWindow(this);
+                parentWindow.Close();
             }
         }
 
