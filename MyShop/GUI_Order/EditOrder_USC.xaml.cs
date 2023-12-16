@@ -19,14 +19,16 @@ using ThreeLayerContract;
 namespace GUI_Order
 {
     /// <summary>
-    /// Interaction logic for AddOrder_USC.xaml
+    /// Interaction logic for EditOrder_USC.xaml
     /// </summary>
-    public partial class AddOrder_USC : UserControl
+    public partial class EditOrder_USC : UserControl
     {
+        ElementOrder _order = new ElementOrder();
         IBus _bus;
-        public AddOrder_USC(IBus bus)
+        public EditOrder_USC(IBus bus, ElementOrder order)
         {
             _bus = bus;
+            _order = order;
             InitializeComponent();
         }
         BindingList<Book> _orderBooks = new BindingList<Book>();
@@ -77,50 +79,52 @@ namespace GUI_Order
             {
                 MessageBox.Show("Lỗi: Giá trị không phải là số nguyên.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
 
         private async void SaveOrderClick(object sender, RoutedEventArgs e)
         {
-            int sumQuantity = 0;
+            int total = 0;
             foreach (Book _book in _orderBooks)
             {
-                sumQuantity += _book.Availability;
+                total = total + _book.Availability;
+                _bus.deleteInOrderDetail(_book, _order.Id);
+                _bus.insertOrderDetail(_book, _order.Id);
             }
-            // Lấy ngày hiện tại
-            DateTime currentDate = DateTime.Now;
-            string _date = currentDate.ToString("yyyy-MM-dd HH:mm:ss");
-            ElementOrder _order = new ElementOrder()
-            {
-                Id = 1,
-                Date = _date,
-                Quantity = sumQuantity,
-                Price = _totalPrice
-            };
+            UserControl1._listOrder[UserControl1.index].Price = _totalPrice;
+            UserControl1._listOrder[UserControl1.index].Quantity = total;
 
-            var insertedId = await _bus.insertOrder(_date, _order);
-            foreach (Book _book in _orderBooks)
-            {
-                _bus.insertOrderDetail(_book, insertedId);
-            }
-            UserControl1._listOrder.Insert(0, _order);
-
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Close();
+            Window parent = Window.GetWindow(this);
+            parent.Close();
         }
-        public async void OrderWindow_Load(object sender, RoutedEventArgs e)
+        public void EditOrder_Loaded(object sender, RoutedEventArgs e)
+        {
+            getListCateGory();
+        }
+        private void BackClick(object sender, RoutedEventArgs e)
+        {
+            Window parent = Window.GetWindow(this);
+            parent.Close();
+        }
+        private async void getListCateGory()
         {
             var categories = await _bus.getListCateGory();
             // Hiển thị dữ liệu hoặc thực hiện các thao tác khác với danh sách sản phẩm
             dropBoxTypeBook.ItemsSource = categories.ToList();
-            TotalPrice.Text = _totalPrice.ToString();
-        }
-        private void BackClick(object sender, RoutedEventArgs e)
-        {
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Close();
-        }        
+            loadListProduct();
 
+        }
+        private async void loadListProduct()
+        {
+            var _books = await _bus.loadListProduct(_order.Id);
+            foreach (var book in _books)
+            {
+                _orderBooks.Add(book);
+                _totalPrice = _totalPrice + book.Price;
+            }
+            TotalPrice.Text = _totalPrice.ToString();
+            listProductOfOrder.ItemsSource = _orderBooks;            
+
+        }
         private async void LoadListProductWithCategory(object sender, SelectionChangedEventArgs e)
         {
             if (dropBoxTypeBook.SelectedItem == null)
@@ -129,11 +133,9 @@ namespace GUI_Order
             }
             Category _category = (Category)dropBoxTypeBook.SelectedItem;
             string _nameCategory = _category.Name;
-
-
-            var books = await _bus.GetBookByCategory(_nameCategory);
+            var books = await _bus.LoadListProductWithCategory(_nameCategory);
             // Hiển thị dữ liệu hoặc thực hiện các thao tác khác với danh sách sản phẩm
-            listProductOfType.ItemsSource = books;
+            listProductOfType.ItemsSource = books;            
 
         }
         private void SelectProduct(object sender, SelectionChangedEventArgs e)
@@ -151,6 +153,6 @@ namespace GUI_Order
                 _totalPrice = _totalPrice - _book.Price * _book.Availability;
                 TotalPrice.Text = _totalPrice.ToString();
             }
-        }                        
-    }
+        }                     
+    }        
 }

@@ -42,8 +42,10 @@ namespace GUI_Order
         public static BindingList<ElementOrder> _listOrder = new BindingList<ElementOrder>();
         private void addOrderButton(object sender, RoutedEventArgs e)
         {
-            AddOrderWindow _addOrder = new AddOrderWindow();
-            bool? _bool = _addOrder.ShowDialog();
+            var AddOrder_GUI = new AddOrder_GUI(_bus);
+            var program = new OrderPopup(AddOrder_GUI);            
+            
+            bool? _bool = program.ShowDialog();
             if (_bool != null)
             {
 
@@ -104,7 +106,7 @@ namespace GUI_Order
         }                
         private async void OrderWindow_Loaded(object sender, RoutedEventArgs e)
         {            
-            var data = _bus.getListOrder(_offset);
+            var data = await _bus.getListOrder(_offset);
             listOrder.ItemsSource = _listOrder;
             DataContext = _page;
         }        
@@ -186,9 +188,10 @@ namespace GUI_Order
             if (listOrder.SelectedItem != null)
             {
                 ElementOrder _order = (ElementOrder)listOrder.SelectedItem;
-                OrderInformationWindow _detailOrder = new OrderInformationWindow(_order);
+                var detailOrder = new DetailOrder_GUI(_bus, _order);
+                var program = new OrderPopup(detailOrder);                
                 index = (int)listOrder.SelectedIndex;
-                bool? _bool = _detailOrder.ShowDialog();
+                bool? _bool = program.ShowDialog();
                 if (_bool != null)
                 {
 

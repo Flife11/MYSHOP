@@ -79,11 +79,42 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AddOrder_USC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DetailOrder_USC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditOrder_USC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControl1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddOrder_GUI.cs" />
+    <Compile Include="AddOrder_USC.xaml.cs">
+      <DependentUpon>AddOrder_USC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailOrder_GUI.cs" />
+    <Compile Include="DetailOrder_USC.xaml.cs">
+      <DependentUpon>DetailOrder_USC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditOrder_GUI.cs" />
+    <Compile Include="EditOrder_USC.xaml.cs">
+      <DependentUpon>EditOrder_USC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Order.cs" />
+    <Compile Include="OrderPopup.xaml.cs">
+      <DependentUpon>OrderPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -114,6 +145,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enity\Entity.csproj">
+      <Project>{09e8a055-d466-4cad-99f4-6c0cfeafe3ea}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{E5C4CB3C-ABC1-4AF8-B22E-B30A965BD314}</Project>
       <Name>Models</Name>
