@@ -339,20 +339,32 @@
           }
         }
       },
-      "Enity/1.0.0": {
+      "Entity/1.0.0": {
         "type": "project",
         "dependencies": {
           "ThreeLayerContract": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Enity.dll": {}
+          "bin/placeholder/Entity.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Enity.dll": {}
+          "bin/placeholder/Entity.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
         }
       },
       "ThreeLayerContract/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ThreeLayerContract.dll": {}
         },
@@ -982,10 +994,15 @@
         "version.txt"
       ]
     },
-    "Enity/1.0.0": {
+    "Entity/1.0.0": {
       "type": "project",
-      "path": "../Enity/Enity.csproj",
-      "msbuildProject": "../Enity/Enity.csproj"
+      "path": "../Enity/Entity.csproj",
+      "msbuildProject": "../Enity/Entity.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     },
     "ThreeLayerContract/1.0.0": {
       "type": "project",
@@ -996,7 +1013,7 @@
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
       "DocumentFormat.OpenXml >= 3.0.0",
-      "Enity >= 1.0.0",
+      "Entity >= 1.0.0",
       "MaterialDesignColors >= 2.1.4",
       "MaterialDesignThemes >= 4.9.0",
       "MaterialDesignThemes.MahApps >= 0.3.0",
@@ -1031,8 +1048,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Enity.csproj": {
-              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Enity.csproj"
+            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj": {
+              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj"
             }
           }
         }

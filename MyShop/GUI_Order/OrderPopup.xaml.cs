@@ -1,5 +1,4 @@
-﻿using Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,20 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ThreeLayerContract;
 
-namespace MY_SHOP
+namespace GUI_Order
 {
     /// <summary>
-    /// Interaction logic for Shop.xaml
+    /// Interaction logic for OrderPopup.xaml
     /// </summary>
-    public partial class Shop : Window
+    public partial class OrderPopup : Window
     {
         IGUI _gui;
-        public Shop(IGUI gui)
+        public OrderPopup(IGUI gui)
         {
             _gui = gui;
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var control = _gui.GetMainWindow();
@@ -41,15 +39,7 @@ namespace MY_SHOP
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            if (DB.Instance.ConnectionString != null)
-            {
-                var main = new Main();
-                this.Close();
-                main.Show();
-            } else
-            {
-                Application.Current.Shutdown();
-            }
+            this.Close();
         }
     }
 }

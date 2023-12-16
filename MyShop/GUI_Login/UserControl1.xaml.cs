@@ -1,4 +1,4 @@
-﻿using Enity;
+﻿using Entity;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;

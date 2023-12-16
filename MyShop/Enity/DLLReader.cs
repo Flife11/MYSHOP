@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ThreeLayerContract;
 
-namespace Enity
+namespace Entity
 {
     public class DLLReader
     {

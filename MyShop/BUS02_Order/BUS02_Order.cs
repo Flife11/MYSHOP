@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using ThreeLayerContract;
@@ -14,6 +18,27 @@ namespace BUS02_Order
         {
             _dao = dao;
         }
+        public override async Task<Tuple<List<ElementOrder>, int>> getListOrder(int _offset)
+        {
+            var data = await _dao.getListOrder(_offset);
+            return data;
+
+        }
+        public override async Task<List<ElementOrder>> getListOrderPage(int _offset)
+        {
+            var data = await _dao.getListOrderPage(_offset);
+            return data;
+        }
+        public override async Task<Tuple<List<ElementOrder>, int>> getListOrderBySearch(string dateFrom, string dateTo, int _offset)
+        {
+            var data = await _dao.getListOrderBySearch(dateFrom, dateTo, _offset);
+            return data;
+        }
+        public override async Task<List<ElementOrder>> getListOrderBySearchPage(string dateFrom, string dateTo, int _offset)
+        {
+            var data = await _dao.getListOrderBySearchPage(dateFrom, dateTo, _offset);
+            return data;
+        }
         public override string Name()
         {
             return "Order";
@@ -25,7 +50,7 @@ namespace BUS02_Order
 
         public override IBus CreateNew(IDAO dao)
         {
-            throw new NotImplementedException();
+            return new BUS02_Order(dao);
         }
 
         public override Tuple<string, string> LoadServerFromConfig()
