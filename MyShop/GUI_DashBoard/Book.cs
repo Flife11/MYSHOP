@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GUI_DashBoard
 {
-    public class Book
+    public class Book: INotifyPropertyChanged
     {
         public int Id { get; set; }
         public string Title { get; set; }
@@ -16,5 +16,7 @@ namespace GUI_DashBoard
         public string Category { get; set; }
         public string Image {  get; set; }
         public int Availability { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
