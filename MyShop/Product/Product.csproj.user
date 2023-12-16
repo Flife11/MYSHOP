@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AddBookWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddCategoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DetailBookWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditBookWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditCategoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddBookWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DetailBookWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditBookWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

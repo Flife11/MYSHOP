@@ -1,6 +1,0 @@
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\bin\Debug\ThreeLayerContract.dll
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\bin\Debug\ThreeLayerContract.pdb
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.csproj.AssemblyReference.cache
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.csproj.CoreCompileInputs.cache
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.dll
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\ThreeLayerContract\obj\Debug\ThreeLayerContract.pdb

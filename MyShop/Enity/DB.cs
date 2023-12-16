@@ -19,7 +19,7 @@ namespace Enity
             {
                 if (_connection == null)
                 {
-                    _connection = new SqlConnection(ConnectionString); ;
+                    _connection = new SqlConnection(ConnectionString);
                     _connection.Open();
                 }
 

@@ -1,6 +1,0 @@
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\bin\Debug\Enity.dll
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\bin\Debug\Enity.pdb
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.csproj.AssemblyReference.cache
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.csproj.CoreCompileInputs.cache
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.dll
-D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\Enity\obj\Debug\Enity.pdb
