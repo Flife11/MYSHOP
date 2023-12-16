@@ -1,0 +1,78 @@
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MY_SHOP.exe.config
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MY_SHOP.exe
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MY_SHOP.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\ThreeLayerContract.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\ThreeLayerContract.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.AssemblyReference.cache
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MainWindow.g.cs
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\Shop.g.cs
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\App.g.cs
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP_MarkupCompile.cache
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP_MarkupCompile.lref
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MainWindow.baml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\Shop.baml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.g.resources
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.Properties.Resources.resources
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.GenerateResource.cache
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.CoreCompileInputs.cache
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.CopyComplete
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.exe
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\MY_SHOP.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\ControlzEx.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MahApps.Metro.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignColors.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.MahApps.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\ShowMeTheXAML.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\ControlzEx.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\ControlzEx.xml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MahApps.Metro.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MahApps.Metro.xml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignColors.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.MahApps.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Enity.dll
+D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\bin\Debug\Enity.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MY_SHOP.exe.config
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MY_SHOP.exe
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MY_SHOP.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\ControlzEx.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\Enity.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MahApps.Metro.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignColors.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.MahApps.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\ShowMeTheXAML.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\ThreeLayerContract.dll
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\Enity.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\ThreeLayerContract.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\ControlzEx.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\ControlzEx.xml
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MahApps.Metro.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MahApps.Metro.xml
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignColors.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.MahApps.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.AssemblyReference.cache
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MainWindow.g.cs
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\Shop.g.cs
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\App.g.cs
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP_MarkupCompile.cache
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP_MarkupCompile.lref
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MainWindow.baml
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\Shop.baml
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.g.resources
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.Properties.Resources.resources
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.GenerateResource.cache
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.CoreCompileInputs.cache
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.CopyComplete
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.exe
+D:\Workspace\Window\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.pdb
