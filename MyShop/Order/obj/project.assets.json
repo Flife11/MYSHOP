@@ -2193,19 +2193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Order\\Order.csproj",
+      "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj",
       "projectName": "Order",
-      "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Order\\Order.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Order\\obj\\",
+      "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2219,8 +2219,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj": {
-              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj"
+            "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+              "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
             }
           }
         }
@@ -2229,9 +2229,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "default"
       }
     },
     "frameworks": {
@@ -2262,24 +2259,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -2291,13 +2270,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Workspace\\Window\\MYSHOP\\MyShop\\Order\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

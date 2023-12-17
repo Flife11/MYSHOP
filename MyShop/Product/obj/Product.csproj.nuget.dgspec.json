@@ -1,14 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj": {}
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\Product.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj": {
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj",
-        "projectName": "Enity",
-        "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj",
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+                "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -19,17 +38,17 @@
         "net472": {}
       }
     },
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj": {
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\Product.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj",
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\Product.csproj",
         "projectName": "Product",
-        "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\obj\\",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\Product.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,8 +62,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj": {
-                "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj"
+              "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+                "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
               }
             }
           }
@@ -53,9 +72,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
@@ -98,24 +114,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -128,16 +126,16 @@
         }
       }
     },
-    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
         "projectName": "ThreeLayerContract",
-        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj": {
-                "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj"
+              "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj": {
+                "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj"
               }
             }
           }
