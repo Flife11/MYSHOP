@@ -1,4 +1,4 @@
-﻿using Enity;
+﻿using Entity;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
@@ -32,21 +32,21 @@ namespace GUI_Login
             InitializeComponent();
         }
 
-        private void Login_CLick(object sender, RoutedEventArgs e)
+        private async void Login_CLick(object sender, RoutedEventArgs e)
         {            
             string userName = Username.Text;
             string password = Password.Password;
             bool? remember = rememberMe.IsChecked;
 
-
-            _bus.ConnectDB(userName, password);
-            if (DB.Instance.isConnected())
-            {
-                MessageBox.Show("Success");
+            bool connected = await _bus.ConnectDB(userName, password);
+            if (connected==true)
+            {                
                 if (remember==true)
                 {
                     _bus.SaveUserToConfig(userName, password);
                 }
+                Window parentWindow = Window.GetWindow(this);
+                parentWindow.Close();
             }
         }
 

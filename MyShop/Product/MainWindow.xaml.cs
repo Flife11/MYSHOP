@@ -1,4 +1,4 @@
-﻿using Enity;
+﻿using Entity;
 using System;
 using System.Linq;
 using System.Collections.Generic;

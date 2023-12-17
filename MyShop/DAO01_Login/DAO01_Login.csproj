@@ -43,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO_Login.cs" />
+    <Compile Include="DAO01_Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Enity\Enity.csproj">
+    <ProjectReference Include="..\Enity\Entity.csproj">
       <Project>{09e8a055-d466-4cad-99f4-6c0cfeafe3ea}</Project>
-      <Name>Enity</Name>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{e5c4cb3c-abc1-4af8-b22e-b30a965bd314}</Project>
+      <Name>Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThreeLayerContract\ThreeLayerContract.csproj">
       <Project>{C489B275-4D99-4E65-B0DB-B172944E6840}</Project>

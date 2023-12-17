@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{e5c4cb3c-abc1-4af8-b22e-b30a965bd314}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ThreeLayerContract\ThreeLayerContract.csproj">
       <Project>{C489B275-4D99-4E65-B0DB-B172944E6840}</Project>
       <Name>ThreeLayerContract</Name>

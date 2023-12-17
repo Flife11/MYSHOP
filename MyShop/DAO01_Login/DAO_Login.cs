@@ -43,8 +43,9 @@ namespace DAO01_Login
 
             if (connection != null )
             {
-                DB.Instance.Connect = true;
-            } else { DB.Instance.Connect = false; }
+                DB.Instance.ConnectionString = connectionString;
+                connection.Close();
+            }
         }
 
         public override Tuple<string, string> LoadServerFromConfig()

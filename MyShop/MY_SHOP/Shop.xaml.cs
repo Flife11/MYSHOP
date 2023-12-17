@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,7 +41,15 @@ namespace MY_SHOP
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Application.Current.Shutdown();
+            if (DB.Instance.ConnectionString != null)
+            {
+                var main = new Main();
+                this.Close();
+                main.Show();
+            } else
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

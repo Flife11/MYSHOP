@@ -127,6 +127,25 @@
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
+    },
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "projectName": "ThreeLayerContract",
+        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj": {
+                "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
     }
   }
 }

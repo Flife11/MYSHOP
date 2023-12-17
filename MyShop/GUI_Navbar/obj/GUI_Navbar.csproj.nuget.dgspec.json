@@ -34,6 +34,7 @@
           "warnAsError": [
             "NU1605"
           ]
+
         },
         "restoreAuditProperties": {
           "enableAudit": "default"
@@ -67,6 +68,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",

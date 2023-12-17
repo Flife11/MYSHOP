@@ -129,9 +129,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Enity\Enity.csproj">
+    <ProjectReference Include="..\Enity\Entity.csproj">
       <Project>{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}</Project>
-      <Name>Enity</Name>
+      <Name>Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThreeLayerContract\ThreeLayerContract.csproj">
       <Project>{C489B275-4D99-4E65-B0DB-B172944E6840}</Project>
