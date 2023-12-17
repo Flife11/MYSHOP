@@ -13,7 +13,7 @@ namespace ThreeLayerContract
         protected IDAO _dao;
         //------------Login----------//
         public abstract IBus CreateNew(IDAO dao);
-        public abstract void ConnectDB(string userName, string password);
+        public abstract Task<bool> ConnectDB(string userName, string password);
         public abstract void SaveUserToConfig(string userName, string password);
         public abstract void SaveServerToConfig(string server, string database);
         public abstract Tuple<string, string> LoadUserFromConfig();

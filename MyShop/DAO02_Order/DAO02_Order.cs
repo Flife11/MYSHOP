@@ -16,10 +16,10 @@ namespace DAO02_Order
         public override async Task<Tuple<List<ElementOrder>, int>> getListOrder(int _offset)
         {
             string connectionString = DB.Instance.ConnectionString;
-            var connection = new SqlConnection(connectionString);
-            connection.Open();
+            var connection = new SqlConnection(connectionString);            
             try
             {
+                connection.Open();
                 var _orders = await Task.Run(() =>
                 {
                     int over = _offset * 17;
@@ -586,7 +586,7 @@ namespace DAO02_Order
             }
         }
 
-        public override void ConnectDB(string userName, string password)
+        public override Task<bool> ConnectDB(string userName, string password)
         {
             throw new NotImplementedException();
         }

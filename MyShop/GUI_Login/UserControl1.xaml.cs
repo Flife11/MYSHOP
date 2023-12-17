@@ -32,14 +32,14 @@ namespace GUI_Login
             InitializeComponent();
         }
 
-        private void Login_CLick(object sender, RoutedEventArgs e)
+        private async void Login_CLick(object sender, RoutedEventArgs e)
         {            
             string userName = Username.Text;
             string password = Password.Password;
             bool? remember = rememberMe.IsChecked;
 
-            _bus.ConnectDB(userName, password);
-            if (DB.Instance.ConnectionString!=null)
+            bool connected = await _bus.ConnectDB(userName, password);
+            if (connected==true)
             {                
                 if (remember==true)
                 {

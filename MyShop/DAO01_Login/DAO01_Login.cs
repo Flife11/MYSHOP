@@ -15,7 +15,7 @@ namespace DAO01_Login
 {
     public class DAO01_Login : IDAO
     {
-        public async override void ConnectDB(string userName, string password)
+        public async override Task<bool> ConnectDB(string userName, string password)
         {
             var builder = new SqlConnectionStringBuilder();
             builder.DataSource = ConfigurationManager.AppSettings["Server"];
@@ -47,7 +47,9 @@ namespace DAO01_Login
             {
                 DB.Instance.ConnectionString = connectionString;
                 connection.Close();
-            }
+                return true;
+            } 
+            return false;
         }
 
         public override Tuple<string, string> LoadServerFromConfig()

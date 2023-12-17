@@ -90,7 +90,7 @@ namespace BUS02_Order
         {
             return "order";
         }
-        public override void ConnectDB(string userName, string password)
+        public override Task<bool> ConnectDB(string userName, string password)
         {
             throw new NotImplementedException();
         }

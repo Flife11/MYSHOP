@@ -13,7 +13,7 @@ namespace ThreeLayerContract
     {
         //------------Login-------------//
         public abstract void Save();
-        public abstract void ConnectDB(string userName, string password);
+        public abstract Task<bool> ConnectDB(string userName, string password);
         public abstract void SaveUserToConfig(string userName, string password);
         public abstract void SaveServerToConfig(string server, string database);
         public abstract Tuple<string,string> LoadUserFromConfig();

@@ -17,9 +17,9 @@ namespace BUS01_Login
             _dao = dao;
         }
 
-        public override void ConnectDB(string userName, string password)
+        public override async Task<bool> ConnectDB(string userName, string password)
         {
-            _dao.ConnectDB(userName, password);
+            return await _dao.ConnectDB(userName, password);
         }        
 
         public override IBus CreateNew(IDAO dao)
