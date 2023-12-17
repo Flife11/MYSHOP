@@ -339,13 +339,37 @@
           }
         }
       },
-      "Enity/1.0.0": {
+      "Entity/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "ThreeLayerContract": "1.0.0"
+        },
         "compile": {
-          "bin/placeholder/Enity.dll": {}
+          "bin/placeholder/Entity.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Enity.dll": {}
+          "bin/placeholder/Entity.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
+      "ThreeLayerContract/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ThreeLayerContract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ThreeLayerContract.dll": {}
         }
       }
     }
@@ -970,16 +994,26 @@
         "version.txt"
       ]
     },
-    "Enity/1.0.0": {
+    "Entity/1.0.0": {
       "type": "project",
-      "path": "../Enity/Enity.csproj",
-      "msbuildProject": "../Enity/Enity.csproj"
+      "path": "../Enity/Entity.csproj",
+      "msbuildProject": "../Enity/Entity.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
+    "ThreeLayerContract/1.0.0": {
+      "type": "project",
+      "path": "../ThreeLayerContract/ThreeLayerContract.csproj",
+      "msbuildProject": "../ThreeLayerContract/ThreeLayerContract.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
       "DocumentFormat.OpenXml >= 3.0.0",
-      "Enity >= 1.0.0",
+      "Entity >= 1.0.0",
       "MaterialDesignColors >= 2.1.4",
       "MaterialDesignThemes >= 4.9.0",
       "MaterialDesignThemes.MahApps >= 0.3.0",
@@ -988,19 +1022,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\THUC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj",
+      "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj",
       "projectName": "Product",
-      "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\obj\\",
+      "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj",
+      "packagesPath": "C:\\Users\\THUC\\.nuget\\packages\\",
+      "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1014,8 +1048,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj": {
-              "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Enity.csproj"
+            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj": {
+              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj"
             }
           }
         }
@@ -1024,9 +1058,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "default"
       }
     },
     "frameworks": {
@@ -1069,24 +1100,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
