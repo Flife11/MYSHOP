@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Enity;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -152,25 +153,25 @@ namespace GUI_Product
             if (_sortOption == "ASC")
             {
                 if (_sortBy == "ID")
-                    _books = new BindingList<Book>(_books.OrderBy(c => c.ID).ToList());
+                    _books = new BindingList<Book>(_books.OrderBy(c => c.id).ToList());
                 else if (_sortBy == "Title")
-                    _books = new BindingList<Book>(_books.OrderBy(c => c.Title).ToList());
+                    _books = new BindingList<Book>(_books.OrderBy(c => c.title).ToList());
                 else if (_sortBy == "Price")
-                    _books = new BindingList<Book>(_books.OrderBy(c => c.Price).ToList());
+                    _books = new BindingList<Book>(_books.OrderBy(c => c.price).ToList());
                 else if (_sortBy == "Availability")
-                    _books = new BindingList<Book>(_books.OrderBy(c => c.Availability).ToList());
+                    _books = new BindingList<Book>(_books.OrderBy(c => c.availability).ToList());
             }
 
             else if (_sortOption == "DESC")
             {
                 if (_sortBy == "ID")
-                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.ID).ToList());
+                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.id).ToList());
                 else if (_sortBy == "Title")
-                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.Title).ToList());
+                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.title).ToList());
                 else if (_sortBy == "Price")
-                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.Price).ToList());
+                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.price).ToList());
                 else if (_sortBy == "Availability")
-                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.Availability).ToList());
+                    _books = new BindingList<Book>(_books.OrderByDescending(c => c.availability).ToList());
             }
             booksListView.ItemsSource = _books;
         }
@@ -178,51 +179,9 @@ namespace GUI_Product
         private void searchBook()
         {
             _books.Clear();
-
-            var sql = $"SELECT *, count(*) over() as Total FROM book " +
-                $"WHERE Title LIKE @Keyword AND Price >= @minPrice and Price <= @maxPrice " +
-                $"ORDER BY {_sortBy} {_sortOption} " +
-                $"OFFSET @Skip ROWS FETCH NEXT @Take ROWS ONLY";
-            var command = new SqlCommand(sql, DB.Instance.Connection);
-            command.Parameters.Add("@Skip", SqlDbType.Int)
-                .Value = (_currentPage - 1) * _rowsPerPage;
-            command.Parameters.Add("@Take", SqlDbType.Int)
-                .Value = _rowsPerPage;
-            command.Parameters.Add("@minPrice", SqlDbType.Int)
-                .Value = _minPrice;
-            command.Parameters.Add("@maxPrice", SqlDbType.Int)
-                .Value = _maxPrice;
-            //var keyword = SearchTextBox.Text;
-            command.Parameters.Add("@Keyword", SqlDbType.Text)
-                .Value = $"%{_searchText}%";
-
-            var reader = command.ExecuteReader();
-
-            int count = -1;
-            while (reader.Read())
-            {
-                int id = (int)reader["ID"];
-                string title = (string)reader["Title"];
-                double price = (double)reader["Price"];
-                string description = (string)reader["Description"];
-                string category = (string)reader["Category"];
-                string image = (string)reader["Image"];
-                int availability = (int)reader["Availability"];
-
-                var bookitem = new book()
-                {
-                    ID = id,
-                    Title = title,
-                    Price = (float)price,
-                    Description = description,
-                    Category = category,
-                    Image = image,
-                    Availability = availability
-                };
-                _books.Add(bookitem);
-                count = (int)reader["Total"];
-            }
-            reader.Close();
+            var data = _bus.searchBook(_sortBy, _sortOption, _searchText, _currentPage, _rowsPerPage, _minPrice, _maxPrice);
+            int count = data.Item2;
+            _books = data.Item1;
 
             if (count != _totalItems)
             {
@@ -245,7 +204,8 @@ namespace GUI_Product
                 pagingComboBox.ItemsSource = pageInfos;
                 pagingComboBox.SelectedIndex = 0;
             }
-        }
+        }        
+
         private void CategoryListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SearchTextBox.Text = "";
@@ -270,42 +230,9 @@ namespace GUI_Product
         private void selectBookByCategory(string name)
         {
             _books.Clear();
-
-            var sql = $"SELECT *, count(*) over() as Total FROM book " +
-                $"WHERE Category = '{name}' AND Title LIKE @Keyword AND Price >= @minPrice and Price <= @maxPrice " +
-                $"ORDER BY {_sortBy} {_sortOption} " +
-                $"OFFSET @Skip ROWS FETCH NEXT @Take ROWS ONLY";
-            var command = new SqlCommand(sql, DB.Instance.Connection);
-            command.Parameters.Add("@Skip", SqlDbType.Int)
-                .Value = (_currentPage - 1) * _rowsPerPage;
-            command.Parameters.Add("@Take", SqlDbType.Int)
-                .Value = _rowsPerPage;
-            command.Parameters.Add("@minPrice", SqlDbType.Int)
-                .Value = _minPrice;
-            command.Parameters.Add("@maxPrice", SqlDbType.Int)
-                .Value = _maxPrice;
-            //var keyword = SearchTextBox.Text;
-            command.Parameters.Add("@Keyword", SqlDbType.Text)
-                .Value = $"%{_searchText}%";
-
-            var reader = command.ExecuteReader();
-
-            int count = -1;
-            while (reader.Read())
-            {
-                int id = (int)reader["ID"];
-                string title = (string)reader["Title"];
-                double price = (double)reader["Price"];
-                string description = (string)reader["Description"];
-                string category = (string)reader["Category"];
-                string image = (string)reader["Image"];
-                int availability = (int)reader["Availability"];
-
-                var bookitem = new Book() { id = id, title = title, price = (float)price, description = description, category = category, imgurl = image, availability = availability };
-                _books.Add(bookitem);
-                count = (int)reader["Total"];
-            }
-            reader.Close();
+            var data = _bus.selectBookByCategory(name, _sortBy, _sortOption, _searchText, _currentPage, _rowsPerPage, _minPrice, _maxPrice);
+            int count = data.Item2;
+            _books = data.Item1;
 
             if (count != _totalItems)
             {
@@ -381,19 +308,11 @@ namespace GUI_Product
                 return;
             }
 
-            var sql = $"DELETE FROM book where Category = '{selectedCategory.Name}'";
-            var command = new SqlCommand(sql, DB.Instance.Connection);
-            command.ExecuteNonQuery();
-
-            sql = $"DELETE FROM Category where ID = {selectedCategory.ID}";
-            command = new SqlCommand(sql, DB.Instance.Connection);
-            command.ExecuteNonQuery();
+            _bus.DeleteCategory(selectedCategory.Name, selectedCategory.Id);           
 
             _books.Clear();
             _categories.Remove(selectedCategory);
             selectBookByCategory(_categoryName);
-
-
         }
 
         //Category _backupCat;
@@ -410,7 +329,7 @@ namespace GUI_Product
             _backupCat = (Category)category.Clone();
             var screen = new EditCategoryWindow(category);
 
-            if (screen.ShowDialog()!.Value == true)
+            if (screen.ShowDialog().Value == true)
             {
                 var sql = $"UPDATE Category SET Name='{screen.editCategory.Name}' WHERE ID = {_backupCat.ID}";
                 var command = new SqlCommand(sql, DB.Instance.Connection);
@@ -431,14 +350,14 @@ namespace GUI_Product
         //delete and edit book
         private void DeleteBook_Button_Click(object sender, RoutedEventArgs e)
         {
-            var selectedBook = (book)booksListView.SelectedItem;
+            var selectedBook = (Book)booksListView.SelectedItem;
             if (selectedBook == null)
             {
                 MessageBox.Show("Please select a book to delete");
                 return;
             }
 
-            var sql = $"DELETE FROM book where ID = {selectedBook.ID}";
+            var sql = $"DELETE FROM book where ID = {selectedBook.Id}";
             var command = new SqlCommand(sql, DB.Instance.Connection);
             command.ExecuteNonQuery();
 
@@ -446,18 +365,18 @@ namespace GUI_Product
         }
         private void EditBook_Button_Click(object sender, RoutedEventArgs e)
         {
-            book _backupBook;
-            var book = (book)booksListView.SelectedItem;
+            Book _backupBook;
+            var book = (Book)booksListView.SelectedItem;
             if (book == null)
             {
                 MessageBox.Show("Please select a book to edit");
                 return;
             }
-            _backupBook = (book)book.Clone();
+            _backupBook = (Book)book.Clone();
             var screen = new EditBookWindow(_categories, book);
-            if (screen.ShowDialog()!.Value == true)
+            if (screen.ShowDialog().Value == true)
             {
-                var sql = $"UPDATE book SET Title='{screen.editBook.Title}', Price={screen.editBook.Price}, Description='{screen.editBook.Description}', Category='{screen.editBook.Category}', Image='{screen.editBook.Image}', Availability={screen.editBook.Availability} WHERE ID = {_backupBook.ID}";
+                var sql = $"UPDATE book SET Title='{screen.editBook.Title}', Price={screen.editBook.Price}, Description='{screen.editBook.Description}', Category='{screen.editBook.Category}', Image='{screen.editBook.Image}', Availability={screen.editBook.availability} WHERE ID = {_backupBook.id}";
                 var command = new SqlCommand(sql, DB.Instance.Connection);
                 command.ExecuteNonQuery();
 
@@ -473,7 +392,8 @@ namespace GUI_Product
 
         private void AddCategory_Button_Click(object sender, RoutedEventArgs e)
         {
-            var screen = new AddCategoryWindow();
+            var AddCategory = new AddCategory_GUI(_bus);            
+            var screen = new PopupProduct(AddCategory);
             screen.ShowDialog();
 
             selectAllCategory();
@@ -481,7 +401,8 @@ namespace GUI_Product
 
         private void AddBook_Button_Click(object sender, RoutedEventArgs e)
         {
-            var screen = new AddBookWindow(_categories);
+            var AddBook = new AddBook_GUI(_bus, _categories);
+            var screen = new PopupProduct(AddBook);            
             screen.ShowDialog();
 
             selectBookByCategory(_categoryName);

@@ -32,6 +32,28 @@ namespace BUS04_Product
         {
             _dao.insertCategoryAndBook(categories, books);
         }
+        public override Tuple<BindingList<Book>, int> searchBook(string _sortBy, string _sortOption, string _searchText, int _currentPage,
+            int _rowsPerPage, int _minPrice, int _maxPrice)
+        {
+            return _dao.searchBook(_sortBy, _sortOption, _searchText, _currentPage, _rowsPerPage, _minPrice, _maxPrice);
+        }
+        public override Tuple<BindingList<Book>, int> selectBookByCategory(string name, string _sortBy, string _sortOption, string _searchText, int _currentPage,
+            int _rowsPerPage, int _minPrice, int _maxPrice)
+        {
+            return _dao.selectBookByCategory(name, _sortBy, _sortOption, _searchText, _currentPage, _rowsPerPage, _minPrice, _maxPrice);
+        }
+        public override void DeleteCategory(string Name, int Id)
+        {
+            _dao.DeleteCategory(Name, Id);
+        }
+        public override bool SaveCategory(string CategoryName)
+        {
+            return _dao.SaveCategory(CategoryName);
+        }
+        public override void AddBook(string title, string price, string description, string category, string image, string availability)
+        {
+            _dao.AddBook(title, price, description, category, image, availability);
+        }
         public override Task<bool> ConnectDB(string userName, string password)
         {
             throw new NotImplementedException();

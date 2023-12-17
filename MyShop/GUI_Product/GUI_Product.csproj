@@ -79,10 +79,33 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="AddBook_USC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddCategory_USC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PopupProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControl1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddBook_USC.xaml.cs">
+      <DependentUpon>AddBook_USC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddCategory_GUI.cs" />
+    <Compile Include="AddCategory_USC.xaml.cs">
+      <DependentUpon>AddCategory_USC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook_GUI.cs" />
+    <Compile Include="PopupProduct.xaml.cs">
+      <DependentUpon>PopupProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -113,6 +136,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enity\Entity.csproj">
+      <Project>{09E8A055-D466-4CAD-99F4-6C0CFEAFE3EA}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{E5C4CB3C-ABC1-4AF8-B22E-B30A965BD314}</Project>
       <Name>Models</Name>

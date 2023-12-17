@@ -3,12 +3,14 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ThreeLayerContract;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAO04_Product
 {
@@ -103,20 +105,16 @@ namespace DAO04_Product
         {
             try
             {
+                var _categories = new BindingList<Category>();
                 for (int i = 0; i < categories.Count; i++)
                 {
                     var sql = "INSERT INTO Category (ID, Name) VALUES (@ID, @Name)";
                     var command = new SqlCommand(sql, DB.Instance.Connection);
-                    command.Parameters.AddWithValue("@ID", categories[i].ID);
+                    command.Parameters.AddWithValue("@ID", categories[i].Id);
                     command.Parameters.AddWithValue("@Name", categories[i].Name);
 
                     command.ExecuteNonQuery();
-                }
-                foreach (var category in categories)
-                {
-                    _categories.Add(category);
-                }
-                CategoryListBox.ItemsSource = _categories;
+                }                
 
                 for (int i = 0; i < books.Count; i++)
                 {
@@ -143,6 +141,144 @@ namespace DAO04_Product
             {
                 throw ex;
             }
+        }
+        public override Tuple<BindingList<Book>, int> searchBook(string _sortBy, string _sortOption, string _searchText, int _currentPage,
+            int _rowsPerPage, int _minPrice, int _maxPrice)
+        {
+            var sql = $"SELECT *, count(*) over() as Total FROM book " +
+                                $"WHERE Title LIKE @Keyword AND Price >= @minPrice and Price <= @maxPrice " +
+                                $"ORDER BY {_sortBy} {_sortOption} " +
+                                $"OFFSET @Skip ROWS FETCH NEXT @Take ROWS ONLY";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            command.Parameters.Add("@Skip", SqlDbType.Int)
+                .Value = (_currentPage - 1) * _rowsPerPage;
+            command.Parameters.Add("@Take", SqlDbType.Int)
+                .Value = _rowsPerPage;
+            command.Parameters.Add("@minPrice", SqlDbType.Int)
+                .Value = _minPrice;
+            command.Parameters.Add("@maxPrice", SqlDbType.Int)
+                .Value = _maxPrice;
+            //var keyword = SearchTextBox.Text;
+            command.Parameters.Add("@Keyword", SqlDbType.Text)
+                .Value = $"%{_searchText}%";
+
+            var reader = command.ExecuteReader();
+
+            int count = -1;
+            var _books = new BindingList<Book>();
+            while (reader.Read())
+            {
+                int id = (int)reader["ID"];
+                string title = (string)reader["Title"];
+                double price = (double)reader["Price"];
+                string description = (string)reader["Description"];
+                string category = (string)reader["Category"];
+                string image = (string)reader["Image"];
+                int availability = (int)reader["Availability"];
+
+                var bookitem = new Book() { id = id, title = title, price = (float)price, description = description, category = category, imgurl = image, availability = availability };
+                _books.Add(bookitem);
+                count = (int)reader["Total"];
+            }
+            reader.Close();
+            return Tuple.Create(_books, count);
+        }
+        public override Tuple<BindingList<Book>, int> selectBookByCategory(string name, string _sortBy, string _sortOption, string _searchText, int _currentPage,
+            int _rowsPerPage, int _minPrice, int _maxPrice)
+        {
+            var sql = $"SELECT *, count(*) over() as Total FROM book " +
+                $"WHERE Category = '{name}' AND Title LIKE @Keyword AND Price >= @minPrice and Price <= @maxPrice " +
+                $"ORDER BY {_sortBy} {_sortOption} " +
+                $"OFFSET @Skip ROWS FETCH NEXT @Take ROWS ONLY";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            command.Parameters.Add("@Skip", SqlDbType.Int)
+                .Value = (_currentPage - 1) * _rowsPerPage;
+            command.Parameters.Add("@Take", SqlDbType.Int)
+                .Value = _rowsPerPage;
+            command.Parameters.Add("@minPrice", SqlDbType.Int)
+                .Value = _minPrice;
+            command.Parameters.Add("@maxPrice", SqlDbType.Int)
+                .Value = _maxPrice;
+            //var keyword = SearchTextBox.Text;
+            command.Parameters.Add("@Keyword", SqlDbType.Text)
+                .Value = $"%{_searchText}%";
+
+            var reader = command.ExecuteReader();
+
+            int count = -1;
+            var _books = new BindingList<Book>();
+            while (reader.Read())
+            {
+                int id = (int)reader["ID"];
+                string title = (string)reader["Title"];
+                double price = (double)reader["Price"];
+                string description = (string)reader["Description"];
+                string category = (string)reader["Category"];
+                string image = (string)reader["Image"];
+                int availability = (int)reader["Availability"];
+
+                var bookitem = new Book() { id = id, title = title, price = (float)price, description = description, category = category, imgurl = image, availability = availability };
+                _books.Add(bookitem);
+                count = (int)reader["Total"];
+            }
+            reader.Close();
+            return Tuple.Create(_books, count);
+        }
+        public override void DeleteCategory(string Name, int Id)
+        {
+            var sql = $"DELETE FROM book where Category = '{Name}'";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            command.ExecuteNonQuery();
+
+            sql = $"DELETE FROM Category where ID = {Id}";
+            command = new SqlCommand(sql, DB.Instance.Connection);
+            command.ExecuteNonQuery();
+        }
+        public override bool SaveCategory(string CategoryName)
+        {
+            var sql = $"SELECT* FROM Category where Name = '{CategoryName}'";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {                
+                reader.Close();
+                return true;
+            }
+            reader.Close();
+
+            //select max id of Category +1 and cast to int
+            sql = "SELECT MAX(ID) FROM Category";
+            command = new SqlCommand(sql, DB.Instance.Connection);
+            reader = command.ExecuteReader();
+            reader.Read();
+            var id = reader.GetInt32(0) + 1;
+            reader.Close();
+
+            sql = $"INSERT INTO Category VALUES({id},'{CategoryName}')";
+            command = new SqlCommand(sql, DB.Instance.Connection);
+            command.ExecuteNonQuery();
+            return false;
+        }
+        public override void AddBook(string title, string price, string description, string category, string image, string availability)
+        {
+            var sql = "SELECT MAX(ID) FROM book";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            var reader = command.ExecuteReader();
+            reader.Read();
+            var id = reader.GetInt32(0) + 1;
+            reader.Close();
+
+            sql = "INSERT INTO book VALUES (@ID, @Title, @Price, @Description, @Category, @Image, @Availability)";
+            command = new SqlCommand(sql, DB.Instance.Connection);
+            command.Parameters.AddWithValue("@ID", id);
+            command.Parameters.AddWithValue("@Title", title);
+            command.Parameters.AddWithValue("@Price", float.Parse(price));
+            command.Parameters.AddWithValue("@Description", description);
+            command.Parameters.AddWithValue("@Category", category);
+            command.Parameters.AddWithValue("@Image", image);
+            command.Parameters.AddWithValue("@Availability", int.Parse(availability));
+
+            command.ExecuteNonQuery();
         }
         public override Task<bool> ConnectDB(string userName, string password)
         {
