@@ -42,7 +42,6 @@ namespace DAO02_Order
                                 };
                                 listorder.Add(_order);
                             }
-                            System.Threading.Thread.Sleep(500);
                             return listorder;
                         }
                     }
@@ -57,7 +56,6 @@ namespace DAO02_Order
                     using (var command = new SqlCommand(query, connection))
                     {
                         int rowCount = (int)command.ExecuteScalar();
-                        System.Threading.Thread.Sleep(500);
 
                         return rowCount;
                     }
@@ -101,7 +99,6 @@ namespace DAO02_Order
                                 };
                                 listorder.Add(_order);
                             }
-                            System.Threading.Thread.Sleep(500);
                             return listorder;
                         }
                     }

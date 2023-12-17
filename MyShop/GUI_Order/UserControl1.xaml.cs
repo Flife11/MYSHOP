@@ -81,23 +81,7 @@ namespace GUI_Order
             }
             _page._pageSize = data.Item2;
             _page._currentPage = 1;
-            if (_page._currentPage == 1)
-            {
-                previousPage.IsEnabled = false;
-            }
-            else
-            {
-                previousPage.IsEnabled = true;
-            }
-            if (_page._currentPage == _page._pageSize)
-            {
-                nextPage.IsEnabled = false;
-            }
-            else
-            {
-                nextPage.IsEnabled = true;
 
-            }
             listOrder.ItemsSource = _listOrder;
             DataContext = _page;
             //---------
@@ -107,7 +91,14 @@ namespace GUI_Order
         private async void OrderWindow_Loaded(object sender, RoutedEventArgs e)
         {            
             var data = await _bus.getListOrder(_offset);
+            var _list=data.Item1;
+            foreach(ElementOrder elementOrder in _list)
+            {
+                _listOrder.Add(elementOrder);
+            }    
             listOrder.ItemsSource = _listOrder;
+            _page._pageSize = data.Item2;
+            _page._currentPage = 1;
             DataContext = _page;
         }        
 
@@ -173,11 +164,7 @@ namespace GUI_Order
                     }
                     listOrder.ItemsSource = _listOrder;
                 }
-                if (_page._currentPage == _page._pageSize)
-                {
-                    nextPage.IsEnabled = false;
-                }
-                previousPage.IsEnabled = true;
+               
 
             }
 

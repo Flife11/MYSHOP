@@ -8,7 +8,7 @@
 xmlns:materialDesignPack="http://materialdesigninxaml.net/winfx/xaml/themes"
         
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+             d:DesignHeight="600" d:DesignWidth="1000" Loaded="EditOrder_Loaded">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

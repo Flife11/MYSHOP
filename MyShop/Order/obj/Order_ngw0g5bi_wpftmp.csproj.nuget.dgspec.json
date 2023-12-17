@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj": {}
+  },
+  "projects": {
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+                "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj",
+        "projectName": "Order",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {
+              "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+                "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[2.1.4, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+      "restore": {
+        "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "projectName": "ThreeLayerContract",
+        "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj": {
+                "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}
