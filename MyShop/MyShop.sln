@@ -19,6 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Enity\Entity.cspr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product", "Product\Product.csproj", "{C925B3A9-8FE7-44B9-B2F3-5C24A31B1B84}"
 EndProject
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order", "Order\Order.csproj", "{7D4D5FD0-A033-4470-9B3F-AF09381A4E05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Order", "GUI_Order\GUI_Order.csproj", "{DA6C33F0-F2EE-4AFD-9185-DAB11DAFF37C}"
@@ -28,6 +29,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO02_Order", "DAO02_Order\DAO02_Order.csproj", "{E442A2DC-2BEF-4709-A9C0-8DB7DBC6794B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{E5C4CB3C-ABC1-4AF8-B22E-B30A965BD314}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
