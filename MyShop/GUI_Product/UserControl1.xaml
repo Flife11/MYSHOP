@@ -1,0 +1,150 @@
+﻿<UserControl x:Class="GUI_Product.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI_Product"
+             mc:Ignorable="d"
+             
+  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+xmlns:materialDesignPack="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Canvas>
+        <Button Content="Import book" x:Name="Import_Button" Click="Import_Button_Click" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedDarkButton}" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Canvas.Left="78" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Height="48" Width="139" />
+
+        <TextBox Name="SearchTextBox" Height="48" materialDesign:HintAssist.Hint="Search by book name" materialDesign:TextFieldAssist.CharacterCounterVisibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=MaterialDesignOutlinedTextBoxTextCountComboBox}" MaxLength="40" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Width="240" Canvas.Left="256" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <TextBox Name="MinPrice" Height="48" materialDesign:HintAssist.Hint="Min Price" materialDesign:TextFieldAssist.CharacterCounterVisibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=MaterialDesignOutlinedTextBoxTextCountComboBox}" MaxLength="40" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Width="86" Canvas.Left="502" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBox Name="MaxPrice" Height="48" materialDesign:HintAssist.Hint="Max Price" materialDesign:TextFieldAssist.CharacterCounterVisibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=MaterialDesignOutlinedTextBoxTextCountComboBox}" MaxLength="40" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Width="84" Canvas.Left="594" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Button Click="ApplyFilter_Button_Click" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}" ToolTip="MaterialDesignFloatingActionMiniDarkButton" Canvas.Left="693" Canvas.Top="14" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <materialDesign:PackIcon Kind="Magnify" />
+        </Button>
+
+        <materialDesign:DialogHost DialogClosed="Category_OnDialogClosed" DialogClosing="Category_OnDialogClosing" DialogTheme="Inherit" DialogContentUniformCornerRadius="20" Canvas.Left="54" Canvas.Top="71" HorizontalAlignment="Center" VerticalAlignment="Top" Width="139" Height="271">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel Margin="16">
+                    <TextBlock Text="Add a new category" />
+                    <TextBox x:Name="CategoryTextBox" Margin="0,8,0,0" HorizontalAlignment="Stretch" />
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button Margin="0,8,8,0" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="ACCEPT" IsDefault="True" Style="{StaticResource MaterialDesignFlatButton}">
+                            <Button.CommandParameter>
+                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                    True
+                                </system:Boolean>
+                            </Button.CommandParameter>
+                        </Button>
+                        <Button Margin="0,8,8,0" Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Content="CANCEL" IsCancel="True" Style="{StaticResource MaterialDesignFlatButton}">
+                            <Button.CommandParameter>
+                                <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                    False
+                                </system:Boolean>
+                            </Button.CommandParameter>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+            <Border MinHeight="256" BorderBrush="{DynamicResource PrimaryHueMidBrush}" BorderThickness="1" ClipToBounds="True" Margin="24,0,-24,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <ListBox x:Name="CategoryListBox" SelectionChanged="CategoryListBox_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                <Run Text="{Binding ID}" />-<Run Text="{Binding Name}" />
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <materialDesign:ColorZone Grid.Row="1" Effect="{DynamicResource MaterialDesignShadowDepth5}" Mode="PrimaryMid">
+                        <TextBlock Margin="16" Text="Fruit Bowl" />
+                    </materialDesign:ColorZone>
+                    <Button Grid.Row="0" Margin="0,0,28,-20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="{materialDesign:PackIcon Kind=Plus, Size=22}" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}" Name="AddCategory_Button" Click="AddCategory_Button_Click"/>
+                </Grid>
+            </Border>
+        </materialDesign:DialogHost>
+        <Button Content="Edit" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="LightBlue" Canvas.Left="161" Canvas.Top="358" HorizontalAlignment="Center" VerticalAlignment="Top" Name="EditCategory_Button" Click="EditCategory_Button_Click"/>
+        <Button Content="Delete" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="78" Canvas.Top="358" HorizontalAlignment="Center" VerticalAlignment="Top" Name="DeleteCategory_Button" Click="DeleteCategory_Button_Click"/>
+
+        <TextBlock Text="Sort by: " Canvas.Left="261" Canvas.Top="106" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <ComboBox Name="sortComboBox" Width="124" Height="35" Canvas.Left="315" Canvas.Top="85" SelectionChanged="sortComboBox_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <ComboBoxItem>ID</ComboBoxItem>
+            <ComboBoxItem>Title</ComboBoxItem>
+            <ComboBoxItem>Price</ComboBoxItem>
+            <ComboBoxItem>Availability</ComboBoxItem>
+        </ComboBox>
+        <TextBlock Text="Order: " Canvas.Left="451" Canvas.Top="106" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <ComboBox Name="optionComboBox" Width="59" Height="35" Canvas.Left="490" Canvas.Top="85" SelectionChanged="sortComboBox_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ComboBoxItem>Ascending</ComboBoxItem>
+            <ComboBoxItem>Descending</ComboBoxItem>
+        </ComboBox>
+
+        <Button Name="AddBook_Button" Click="AddBook_Button_Click" Content="{materialDesign:PackIcon Kind=Plus, Size=22}" Panel.ZIndex="5" Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryButton}" Canvas.Left="693" Canvas.Top="300" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Name="EditBook_Button" Click="EditBook_Button_Click" Content="Edit" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="LightBlue" Canvas.Left="678" Canvas.Top="88" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button Name="DeleteBook_Button" Click="DeleteBook_Button_Click" Content="Delete" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="595" Canvas.Top="88" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+
+        <TextBlock Foreground="Gray" Text="(Instruction: double click on any book to view its detail)" Canvas.Left="261" Canvas.Top="62" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+        <Border BorderBrush="Gray" BorderThickness="1" Canvas.Left="260" Canvas.Top="133" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" x:Name="booksListView" Width="471" Height="205" Canvas.Left="218" Canvas.Top="128" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" Width="135" Height="220">
+                            <Image RenderOptions.BitmapScalingMode="HighQuality" Width="100" Height="100" Source="{Binding Image}"></Image>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                                <Run Text="{Binding ID}" />-<Run Text="{Binding Title}" />
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Price:
+                            <Run Text="{Binding Price}" FontStyle="Italic"></Run>
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                            Availability:
+                            <Run Text="{Binding Availability}" FontStyle="Italic"></Run>
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="Book_MouseDoubleClick" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </Border>
+
+        <ComboBox Name="pagingComboBox" Width="200" Height="35" Canvas.Left="396" Canvas.Top="351" SelectionChanged="pagingComboBox_SelectionChanged" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                    <Run Text="{Binding Page, Mode=OneTime}" />/<Run Text="{Binding Total, Mode=OneTime}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button x:Name="previousButton" Width="87" Height="34" Content="Previous" Canvas.Left="276" Canvas.Top="352" Click="previousButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Button x:Name="nextButton" Width="80" Height="34" Content="Next" Canvas.Left="634" Canvas.Top="352" Click="nextButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+    </Canvas>
+</UserControl>

@@ -33,6 +33,12 @@ namespace ThreeLayerContract
         public abstract Task<BindingList<Book>> loadListProduct(int Id);
         public abstract Task<BindingList<Book>> LoadListProductWithCategory(string _nameCategory);
         public abstract void deleteInOrderDetail(Book _book, int IDOrder);
+
+        // -------------------Product---------------//
+        public abstract BindingList<Category> selectAllCategory();
+        public abstract BindingList<Category> readCategoryFile(string filePath);
+        public abstract BindingList<Book> readBookFile(string filePath);
+        public abstract void insertCategoryAndBook(BindingList<Category> categories, BindingList<Book> books);
         public abstract string Name();
     }
 }
