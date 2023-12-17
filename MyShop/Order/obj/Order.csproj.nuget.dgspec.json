@@ -10,7 +10,7 @@
         "projectName": "Entity",
         "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj",
         "frameworks": {
-          "net472": {
+          "net48": {
             "projectReferences": {
               "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
                 "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
@@ -20,7 +20,7 @@
         }
       },
       "frameworks": {
-        "net472": {}
+        "net48": {}
       }
     },
     "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj": {
@@ -29,13 +29,13 @@
         "projectName": "Models",
         "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj",
         "frameworks": {
-          "net472": {
+          "net48": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net472": {}
+        "net48": {}
       }
     },
     "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj": {
@@ -120,7 +120,7 @@
         "projectName": "ThreeLayerContract",
         "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
         "frameworks": {
-          "net472": {
+          "net48": {
             "projectReferences": {
               "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj": {
                 "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj"
@@ -130,7 +130,7 @@
         }
       },
       "frameworks": {
-        "net472": {}
+        "net48": {}
       }
     }
   }

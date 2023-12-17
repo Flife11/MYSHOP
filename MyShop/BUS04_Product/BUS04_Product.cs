@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,18 @@ namespace BUS04_Product
         public override void AddBook(string title, string price, string description, string category, string image, string availability)
         {
             _dao.AddBook(title, price, description, category, image, availability);
+        }
+        public override void EditBook(Book editBook, int id)
+        {
+            _dao.EditBook(editBook, id);
+        }
+        public override void DeleteBook(int Id)
+        {
+            _dao.DeleteBook(Id);
+        }
+        public override void EditCategory(Category editCat, int ID, string Name)
+        {
+            _dao.EditCategory(editCat, ID, Name);
         }
         public override Task<bool> ConnectDB(string userName, string password)
         {

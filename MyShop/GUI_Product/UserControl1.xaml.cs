@@ -1,4 +1,5 @@
 ﻿using Enity;
+using Entity;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -290,11 +291,11 @@ namespace GUI_Product
 
         private void Book_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var selectedBook = (book)booksListView.SelectedItem;
-            var screen = new DetailBookWindow(selectedBook);
+            var selectedBook = (Book)booksListView.SelectedItem;
+            var detailBook_GUI = new DetailBook_GUI(_bus, selectedBook);
+            var screen = new PopupProduct(detailBook_GUI);
 
             screen.ShowDialog();
-
         }
 
         //delete and edit category
@@ -308,7 +309,7 @@ namespace GUI_Product
                 return;
             }
 
-            _bus.DeleteCategory(selectedCategory.Name, selectedCategory.Id);           
+            _bus.DeleteCategory(selectedCategory.Name, selectedCategory.ID);           
 
             _books.Clear();
             _categories.Remove(selectedCategory);
@@ -327,19 +328,13 @@ namespace GUI_Product
             }
 
             _backupCat = (Category)category.Clone();
-            var screen = new EditCategoryWindow(category);
+            var editCategory_GUI = new EditCategory_GUI(_bus, category);
+            var screen = new PopupProduct(editCategory_GUI);
+            //var screen = new EditCategoryWindow(category);
 
             if (screen.ShowDialog().Value == true)
             {
-                var sql = $"UPDATE Category SET Name='{screen.editCategory.Name}' WHERE ID = {_backupCat.ID}";
-                var command = new SqlCommand(sql, DB.Instance.Connection);
-                command.ExecuteNonQuery();
-
-                sql = $"UPDATE book SET Category='{screen.editCategory.Name}' WHERE Category = '{_backupCat.Name}'";
-                command = new SqlCommand(sql, DB.Instance.Connection);
-                command.ExecuteNonQuery();
-
-                screen.editCategory.CopyProperties(category);
+                //_bus.EditCategory();
             }
             else
             {
@@ -357,9 +352,7 @@ namespace GUI_Product
                 return;
             }
 
-            var sql = $"DELETE FROM book where ID = {selectedBook.Id}";
-            var command = new SqlCommand(sql, DB.Instance.Connection);
-            command.ExecuteNonQuery();
+            _bus.DeleteBook(selectedBook.Id);            
 
             _books.Remove(selectedBook);
         }
@@ -373,14 +366,17 @@ namespace GUI_Product
                 return;
             }
             _backupBook = (Book)book.Clone();
-            var screen = new EditBookWindow(_categories, book);
+
+            var editBook_GUI = new EditBook_GUI(_bus, _categories, book);
+            var screen = new PopupProduct(editBook_GUI);
             if (screen.ShowDialog().Value == true)
             {
-                var sql = $"UPDATE book SET Title='{screen.editBook.Title}', Price={screen.editBook.Price}, Description='{screen.editBook.Description}', Category='{screen.editBook.Category}', Image='{screen.editBook.Image}', Availability={screen.editBook.availability} WHERE ID = {_backupBook.id}";
+                /*_bus.EditBook(screen.editBook.Title, screen.editBook.Title);
+                var sql = $"UPDATE book SET Title='{screen.editBook.Title}', Price={screen.editBook.Title}, Description='{screen.editBook.Description}', Category='{screen.editBook.Category}', Image='{screen.editBook.Image}', Availability={screen.editBook.availability} WHERE ID = {_backupBook.id}";
                 var command = new SqlCommand(sql, DB.Instance.Connection);
                 command.ExecuteNonQuery();
 
-                screen.editBook.CopyProperties(book);
+                screen.editBook.CopyProperties(book);*/
                 selectBookByCategory(_categoryName);
                 //comment
             }

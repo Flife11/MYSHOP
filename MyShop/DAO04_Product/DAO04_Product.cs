@@ -31,7 +31,7 @@ namespace DAO04_Product
 
                 var category = new Category()
                 {
-                    Id = id,
+                    ID = id,
                     Name = name
                 };
                 _categories.Add(category);
@@ -59,7 +59,7 @@ namespace DAO04_Product
                     string Name = cells1[1];
 
 
-                    _categories.Add(new Category() { Id = ID, Name = Name });
+                    _categories.Add(new Category() { ID = ID, Name = Name });
                 }
             }
             return _categories;
@@ -110,7 +110,7 @@ namespace DAO04_Product
                 {
                     var sql = "INSERT INTO Category (ID, Name) VALUES (@ID, @Name)";
                     var command = new SqlCommand(sql, DB.Instance.Connection);
-                    command.Parameters.AddWithValue("@ID", categories[i].Id);
+                    command.Parameters.AddWithValue("@ID", categories[i].ID);
                     command.Parameters.AddWithValue("@Name", categories[i].Name);
 
                     command.ExecuteNonQuery();
@@ -278,6 +278,29 @@ namespace DAO04_Product
             command.Parameters.AddWithValue("@Image", image);
             command.Parameters.AddWithValue("@Availability", int.Parse(availability));
 
+            command.ExecuteNonQuery();
+        }
+        public override void EditBook(Book editBook, int id)
+        {
+            var sql = $"UPDATE book SET Title='{editBook.title}', Price={editBook.price}, " +
+                $"Description='{editBook.description}', Category='{editBook.Category}', Image='{editBook.imgurl}', Availability={editBook.availability} WHERE ID = {id}";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            command.ExecuteNonQuery();
+        }
+        public override void DeleteBook(int Id)
+        {
+            var sql = $"DELETE FROM book where ID = {Id}";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            command.ExecuteNonQuery();
+        }
+        public override void EditCategory(Category editCat, int ID, string Name)
+        {
+            var sql = $"UPDATE Category SET Name='{editCat.Name}' WHERE ID = {ID}";
+            var command = new SqlCommand(sql, DB.Instance.Connection);
+            command.ExecuteNonQuery();
+
+            sql = $"UPDATE book SET Category='{editCat.Name}' WHERE Category = '{Name}'";
+            command = new SqlCommand(sql, DB.Instance.Connection);
             command.ExecuteNonQuery();
         }
         public override Task<bool> ConnectDB(string userName, string password)

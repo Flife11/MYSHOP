@@ -1,7 +1,6 @@
 ﻿using Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,28 +9,30 @@ using ThreeLayerContract;
 
 namespace GUI_Product
 {
-    internal class AddBook_GUI : IGUI
+    class DetailBook_GUI : IGUI
     {
-        public BindingList<Category> _categories = new BindingList<Category>();
-        public AddBook_GUI() { }
-        public AddBook_GUI(IBus bus, BindingList<Category> categories)
-        {            
-            _categories = categories;
+        Book detailBook = new Book();
+        IBus _bus;
+        public DetailBook_GUI() { }
+        public DetailBook_GUI(IBus bus, Book detailBook)
+        {
+            this.detailBook = detailBook;
             _bus = bus;
         }
+
         public override IGUI CreateNew(IBus bus)
         {
-            return new AddBook_GUI(bus, _categories);
+            throw new NotImplementedException();
         }
 
         public override UserControl GetMainWindow()
         {
-            return new AddBook_USC(_bus, _categories);
+            return new DetailBook_USC(_bus, detailBook);
         }
 
         public override string Name()
         {
-            return "addBookProduct";
+            throw new NotImplementedException();
         }
     }
 }

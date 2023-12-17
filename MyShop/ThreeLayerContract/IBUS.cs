@@ -45,6 +45,9 @@ namespace ThreeLayerContract
         public abstract void DeleteCategory(string Name, int Id);
         public abstract bool SaveCategory(string CategoryName);
         public abstract void AddBook(string title, string price, string description, string category, string image, string availability);
+        public abstract void EditBook(Book editBook, int id);
+        public abstract void DeleteBook(int Id);
+        public abstract void EditCategory(Category editCat, int ID, string Name);
         public abstract string Name();
     }
 }

@@ -10,28 +10,30 @@ using ThreeLayerContract;
 
 namespace GUI_Product
 {
-    internal class AddBook_GUI : IGUI
+    class EditBook_GUI : IGUI
     {
         public BindingList<Category> _categories = new BindingList<Category>();
-        public AddBook_GUI() { }
-        public AddBook_GUI(IBus bus, BindingList<Category> categories)
-        {            
+        public Book editBook;
+        public EditBook_GUI() { }
+        public EditBook_GUI(IBus bus, BindingList<Category> categories, Book book) 
+        {
             _categories = categories;
+            editBook = book;
             _bus = bus;
         }
         public override IGUI CreateNew(IBus bus)
         {
-            return new AddBook_GUI(bus, _categories);
+            throw new NotImplementedException();
         }
 
         public override UserControl GetMainWindow()
         {
-            return new AddBook_USC(_bus, _categories);
+            return new EditBook_USC(_bus, _categories, editBook);
         }
 
         public override string Name()
         {
-            return "addBookProduct";
+            throw new NotImplementedException();
         }
     }
 }
