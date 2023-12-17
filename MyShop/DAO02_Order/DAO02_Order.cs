@@ -51,7 +51,7 @@ namespace DAO02_Order
 
                 var _counts = await Task.Run(() =>
                 {
-                    int over = _offset * 17;
+                    int over = _offset * 17 -1;
                     // Thực hiện truy vấn SQL để lấy các dòng của bảng 
                     string query = "SELECT Count(*) ID \r\nfrom [Order]";
                     using (var command = new SqlCommand(query, connection))

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GUI_Navbar
-build_property.ProjectDir = D:\Workspace\Window\MYSHOP\MyShop\GUI_Navbar\
+build_property.ProjectDir = E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\GUI_Navbar\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
