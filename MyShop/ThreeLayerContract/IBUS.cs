@@ -19,17 +19,17 @@ namespace ThreeLayerContract
         public abstract string Name();
         public abstract void deleteInOrderDetail(Book _book, int IDOrder);
         public abstract void DeleteOrder(ElementOrder _order);
-        public abstract Task<System.ComponentModel.BindingList<global::Models.Book>> GetBookByCategory(string _nameCategory);
-        public abstract Task<System.ComponentModel.BindingList<global::Models.Book>> GetDetailOrder(int Id);
-        public abstract Task<List<global::Models.Category>> getListCateGory();
-        public abstract Task<Tuple<List<global::Models.ElementOrder>, int>> getListOrder(int _offset);
-        public abstract Task<Tuple<List<global::Models.ElementOrder>, int>> getListOrderBySearch(string dateFrom, string dateTo, int _offset);
-        public abstract Task<List<global::Models.ElementOrder>> getListOrderBySearchPage(string dateFrom, string dateTo, int _offset);
-        public abstract Task<List<global::Models.ElementOrder>> getListOrderPage(int _offset);
+        public abstract Task<System.ComponentModel.BindingList<Book>> GetBookByCategory(string _nameCategory);
+        public abstract Task<System.ComponentModel.BindingList<Book>> GetDetailOrder(int Id);
+        public abstract Task<List<Category>> getListCateGory();
+        public abstract Task<Tuple<List<ElementOrder>, int>> getListOrder(int _offset);
+        public abstract Task<Tuple<List<ElementOrder>, int>> getListOrderBySearch(string dateFrom, string dateTo, int _offset);
+        public abstract Task<List<ElementOrder>> getListOrderBySearchPage(string dateFrom, string dateTo, int _offset);
+        public abstract Task<List<ElementOrder>> getListOrderPage(int _offset);
         public abstract int GetNextId(string tableName, string idColumnName);
         public abstract Task<int> insertOrder(string _date, ElementOrder _order);
         public abstract void insertOrderDetail(Book _book, int IDOrder);
-        public abstract Task<System.ComponentModel.BindingList<global::Models.Book>> loadListProduct(int Id);
-        public abstract Task<System.ComponentModel.BindingList<global::Models.Book>> LoadListProductWithCategory(string _nameCategory);
+        public abstract Task<System.ComponentModel.BindingList<Book>> loadListProduct(int Id);
+        public abstract Task<System.ComponentModel.BindingList<Book>> LoadListProductWithCategory(string _nameCategory);
     }
 }
