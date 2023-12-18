@@ -47,6 +47,9 @@ namespace GUI_Login
                 }
                 Window parentWindow = Window.GetWindow(this);
                 parentWindow.Close();
+            } else
+            {
+
             }
         }
 
@@ -54,7 +57,7 @@ namespace GUI_Login
         {
             var config_GUI = new Config(_bus);
             var program = new config(config_GUI);
-            program.Show();
+            program.ShowDialog();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

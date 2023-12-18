@@ -25,73 +25,45 @@
                         <StackPanel
           Width="auto"
           Height="auto">
-                            <materialDesign:PackIcon
-            Width="24"
-            Height="24"
-            HorizontalAlignment="Center"
-            Kind="Folder" />
                             <TextBlock
             HorizontalAlignment="Center"
-            Text="All Files" />
+            Text="Dashboard" />
                         </StackPanel>
                     </TabItem.Header>
-                    <Grid
-        Width="100" />
+                    <Grid Name="Dashboard" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
+
+                    </Grid>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel
           Width="auto"
           Height="auto">
-                            <materialDesign:PackIcon
-            Width="24"
-            Height="24"
-            HorizontalAlignment="Center"
-            Kind="ClockOutline" />
                             <TextBlock
             HorizontalAlignment="Center"
-            Text="Recent" />
+            Text="Product" />
                         </StackPanel>
                     </TabItem.Header>
+                    <Grid Name="Product" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
+
+                    </Grid>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>
                         <StackPanel
           Width="auto"
           Height="auto">
-                            <materialDesign:PackIcon
-            Width="24"
-            Height="24"
-            HorizontalAlignment="Center"
-            Kind="Images" />
                             <TextBlock
             HorizontalAlignment="Center"
-            Text="Photos" />
+            Text="Order" />
                         </StackPanel>
                     </TabItem.Header>
-                </TabItem>
-                <TabItem>
-                    <TabItem.Header>
-                        <StackPanel
-          Width="auto"
-          Height="auto">
-                            <materialDesign:PackIcon
-            Width="24"
-            Height="24"
-            HorizontalAlignment="Center"
-            Kind="MusicBoxMultiple" />
-                            <TextBlock
-            HorizontalAlignment="Center"
-            Text="Sounds" />
-                        </StackPanel>
-                    </TabItem.Header>
+                    <Grid Name="Order" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
+
+                    </Grid>
                 </TabItem>
             </TabControl>
         </materialDesign:Card>
-
-       
-        <Grid Name="Content" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
-
-        </Grid>
+             
     </DockPanel>
 </Window>

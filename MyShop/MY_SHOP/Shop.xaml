@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MY_SHOP"
         mc:Ignorable="d"
-        Title="MyShop" Height="{Binding Path=Height}" Width="{Binding Path=Width}" Name="MainWindow" Loaded="Window_Loaded" Closed="Window_Closed" >
+        Title="MyShop" Name="MainWindow" Loaded="Window_Loaded" Closed="Window_Closed" 
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen">
     <Grid Name="Content">
 
     </Grid>

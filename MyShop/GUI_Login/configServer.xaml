@@ -12,7 +12,7 @@
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
          
-         d:DesignHeight="450" d:DesignWidth="800" Loaded="Window_Loaded">
+         d:DesignHeight="350" d:DesignWidth="500" Loaded="Window_Loaded">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -22,7 +22,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
-        <materialDesign:Card FontSize="20" Width="500" Height="300" >
+        <materialDesign:Card FontSize="20" Width="400" Height="250" >
             <Grid>
                 <Grid.Resources>
                     <Style TargetType="Grid">
@@ -41,7 +41,7 @@
                         <TextBox
     x:Name="server"                                
     Margin="0 0 10 0"                            
-    Width="300"
+    Width="270"
     VerticalAlignment="Top"
     materialDesign:HintAssist.Hint="Server"
     AcceptsReturn="True"
@@ -51,9 +51,7 @@
                         <CheckBox                                                  
 x:Name="serverCheckbox"
 Content="Edit" >
-                            <CheckBox.LayoutTransform>
-                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                            </CheckBox.LayoutTransform>
+                            
                         </CheckBox>
                     </StackPanel>
                 </Grid>
@@ -63,7 +61,7 @@ Content="Edit" >
                         <TextBox
     x:Name="database"                            
     Margin="0 0 10 0"                            
-    Width="300"
+    Width="270"
     VerticalAlignment="Top"
     materialDesign:HintAssist.Hint="Database"
     AcceptsReturn="True"
@@ -73,9 +71,6 @@ Content="Edit" >
                         <CheckBox                                                  
 x:Name="databaseCheckbox"
 Content="Edit" >
-                            <CheckBox.LayoutTransform>
-                                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                            </CheckBox.LayoutTransform>
                         </CheckBox>
                     </StackPanel>
                 </Grid>

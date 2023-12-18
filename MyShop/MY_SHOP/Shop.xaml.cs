@@ -41,7 +41,7 @@ namespace MY_SHOP
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            if (DB.Instance.ConnectionString != null)
+            if (DB.Instance.ConnectionString != "")
             {
                 var main = new Main();
                 this.Close();

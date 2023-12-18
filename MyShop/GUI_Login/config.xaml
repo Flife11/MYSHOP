@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI_Login"
         mc:Ignorable="d"
-        Title="MyShop" Height="{Binding Path=Height}" Width="{Binding Path=Width}" Name="MainWindow" Loaded="Window_Loaded" Closed="Window_Closed" >
+        Title="Config" Name="MainWindow" Loaded="Window_Loaded" Closed="Window_Closed" 
+        SizeToContent="WidthAndHeight">
     <Grid Name="Content">
 
     </Grid>

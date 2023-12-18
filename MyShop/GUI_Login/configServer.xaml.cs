@@ -38,6 +38,8 @@ namespace GUI_Login
         private void Save_CLick(object sender, RoutedEventArgs e)
         {
             _bus.SaveServerToConfig(server.Text, database.Text);
+            Window parent = Window.GetWindow(this);
+            parent.Close();
         }
     }
 }
