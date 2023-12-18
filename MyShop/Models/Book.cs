@@ -10,12 +10,13 @@ namespace Models
 {
     public class Book : INotifyPropertyChanged
     {
-        private int id;
-        private string title;
-        private string category;
-        private string imgurl;
-        private int availability;
-        private double price;
+        public int id;
+        public string title;
+        public string description;
+        public string category;
+        public string imgurl;
+        public int availability;
+        public double price;
         public int Id
         {
             get { return id; }

@@ -3,6 +3,5 @@
         <TextBox Name="CategoryName_TextBox" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Enter new category name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Width="153" Canvas.Left="45" Canvas.Top="21" />
         <Button Content="Add" ToolTip="Resource name: MaterialDesignRaisedLightButton" Canvas.Left="131" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SaveCategory_Button" Click="SaveCategory_Button_Click" />
         <Button Content="Close" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="48" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CloseCategory_Button" Click="CloseCategory_Button_Click" />
-
     </Canvas>
 </Window>

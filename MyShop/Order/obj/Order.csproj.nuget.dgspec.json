@@ -1,6 +1,21 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj": {}
+  },
+  "projects": {
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+                "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
+=======
     "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj": {}
   },
   "projects": {
@@ -14,12 +29,25 @@
             "projectReferences": {
               "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
                 "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
+>>>>>>> master
               }
             }
           }
         }
       },
       "frameworks": {
+<<<<<<< HEAD
+        "net48": {}
+      }
+    },
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Models\\Models.csproj",
+        "frameworks": {
+          "net48": {
+=======
         "net472": {}
       }
     },
@@ -30,11 +58,28 @@
         "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj",
         "frameworks": {
           "net472": {
+>>>>>>> master
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
+<<<<<<< HEAD
+        "net48": {}
+      }
+    },
+    "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
+        "projectName": "Order",
+        "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
+        "packagesPath": "C:\\Users\\THUC\\.nuget\\packages\\",
+        "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "net472": {}
       }
     },
@@ -49,6 +94,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> master
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,7 +166,7 @@
         "projectName": "ThreeLayerContract",
         "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
         "frameworks": {
-          "net472": {
+          "net48": {
             "projectReferences": {
               "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj": {
                 "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Models\\Models.csproj"
@@ -130,7 +176,7 @@
         }
       },
       "frameworks": {
-        "net472": {}
+        "net48": {}
       }
     }
   }

@@ -30,9 +30,9 @@ namespace MY_SHOP
         {
             var dllReader = new DLLReader();
 
-            var dao = dllReader.GetDao("order");
-            var bus = dllReader.GetBus("order");
-            var gui = dllReader.GetGUI("order");
+            var dao = dllReader.GetDao("product");
+            var bus = dllReader.GetBus("product");
+            var gui = dllReader.GetGUI("product");
             bus = bus.CreateNew(dao);
             gui = gui.CreateNew(bus);
 

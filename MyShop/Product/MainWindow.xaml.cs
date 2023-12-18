@@ -89,8 +89,8 @@ namespace Product
             var builder = new SqlConnectionStringBuilder();
             builder.DataSource = ".";
             builder.InitialCatalog = "MyShop";
-            builder.UserID = "sa";
-            builder.Password = "0902894946orenji";
+            builder.UserID = "sang123";
+            builder.Password = "1234";
             builder.TrustServerCertificate = true;
 
             string connectionString = builder.ConnectionString;
@@ -131,7 +131,6 @@ namespace Product
         }
         private async void Import_Button_Click(object sender, RoutedEventArgs e)
         {
-
             var categories = new BindingList<Category>();
             var books = new BindingList<book>();
 
@@ -155,9 +154,7 @@ namespace Product
 
 
                     categories.Add(new Category() { ID = ID, Name = Name });
-                }
-                
-
+                }                
             }
 
             //Doc book
