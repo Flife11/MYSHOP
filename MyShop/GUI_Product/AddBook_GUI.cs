@@ -31,7 +31,7 @@ namespace GUI_Product
 
         public override string Name()
         {
-            return "addBookProduct";
+            return "addBook";
         }
     }
 }

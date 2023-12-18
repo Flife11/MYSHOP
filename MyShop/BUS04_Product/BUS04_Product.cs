@@ -74,7 +74,7 @@ namespace BUS04_Product
 
         public override IBus CreateNew(IDAO dao)
         {
-            throw new NotImplementedException();
+            return new BUS04_Product(dao);
         }
 
         public override void deleteInOrderDetail(Book _book, int IDOrder)

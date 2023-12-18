@@ -32,7 +32,7 @@ namespace GUI_Product
 
         public override string Name()
         {
-            throw new NotImplementedException();
+            return "detailBook";
         }
     }
 }

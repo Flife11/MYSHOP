@@ -131,6 +131,7 @@
     <Compile Include="PopupProduct.xaml.cs">
       <DependentUpon>PopupProduct.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -28,8 +28,9 @@ namespace GUI_Product
     public partial class UserControl1 : UserControl
     {
         IBus _bus;
-        public UserControl1()
+        public UserControl1(IBus bus)
         {
+            _bus = bus;
             InitializeComponent();
         }
         BindingList<Category> _categories;

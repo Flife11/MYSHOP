@@ -6,15 +6,15 @@
              xmlns:local="clr-namespace:GUI_Product"
              mc:Ignorable="d" 
              
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-xmlns:materialDesignPack="http://materialdesigninxaml.net/winfx/xaml/themes"             
-             
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" TextElement.Foreground="{DynamicResource MaterialDesignBody}" TextElement.FontWeight="Regular" TextElement.FontSize="13" TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" Background="{DynamicResource MaterialDesignPaper}" FontFamily="{DynamicResource MaterialDesignFont}"                         
              d:DesignHeight="120" d:DesignWidth="240">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>

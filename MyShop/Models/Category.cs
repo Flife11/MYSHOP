@@ -16,7 +16,7 @@ namespace Models
             return MemberwiseClone();
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }

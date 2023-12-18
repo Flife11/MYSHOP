@@ -27,7 +27,7 @@ namespace GUI_Product
 
         public override string Name()
         {
-            return "addCategoryProduct";
+            return "addCategory";
         }
     }
 }

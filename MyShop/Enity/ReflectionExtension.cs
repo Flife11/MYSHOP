@@ -23,8 +23,8 @@ namespace Enity
                 if (targetProp == null) continue;
                 if (!targetProp.CanWrite) continue;
                 if ((targetProp.GetSetMethod(true) != null)
-                    && targetProp.GetSetMethod(true)!.IsPrivate) continue;
-                if ((targetProp.GetSetMethod()!.Attributes
+                    && targetProp.GetSetMethod(true).IsPrivate) continue;
+                if ((targetProp.GetSetMethod().Attributes
                     & System.Reflection.MethodAttributes.Static) != 0) continue;
                 if (!targetProp.PropertyType.IsAssignableFrom(sourceProp.PropertyType)) continue;
 
