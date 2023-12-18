@@ -22,6 +22,7 @@ namespace MY_SHOP
     public partial class Main : Window
     {
         IGUI _gui;
+        List<string> navbar = new List<string>() {"product", "order" };
         public Main()
         {
             InitializeComponent();
@@ -29,25 +30,31 @@ namespace MY_SHOP
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var dllReader = new DLLReader();
+            foreach (var nav in navbar)
+            {
+                var dao = dllReader.GetDao(nav);
+                var bus = dllReader.GetBus(nav);
+                var gui = dllReader.GetGUI(nav);
+                bus = bus.CreateNew(dao);
+                gui = gui.CreateNew(bus);
 
-            var dao = dllReader.GetDao("product");
-            var bus = dllReader.GetBus("product");
-            var gui = dllReader.GetGUI("product");
-            bus = bus.CreateNew(dao);
-            gui = gui.CreateNew(bus);
+                var control = gui.GetMainWindow();
+                var tmp = Dashboard;
+                if (nav=="dahsb") { tmp = Dashboard; }
+                if (nav=="order") { tmp = Order; }
+                if (nav=="product") { tmp = Product; }
 
-            var control = gui.GetMainWindow();
+                tmp.Children.Add(control);
+                tmp.Width = control.Width;
+                tmp.Height = control.Height;
 
-            Content.Children.Add(control);
-            Content.Width = control.Width;
-            Content.Height = control.Height;
-
-            DataContext = control;
+                tmp.DataContext = control;
+            }            
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Current.Shutdown();            
         }
     }
 }

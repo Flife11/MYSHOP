@@ -31,6 +31,7 @@ namespace MY_SHOP
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             var dllReader = new DLLReader();
 
             var dao = dllReader.GetDao("login");
@@ -38,9 +39,7 @@ namespace MY_SHOP
             var gui = dllReader.GetGUI("login");
             bus = bus.CreateNew(dao);
             gui = gui.CreateNew(bus);
-
-            this.Hide();
-
+            
             var program = new Shop(gui);
             program.Show();
 
