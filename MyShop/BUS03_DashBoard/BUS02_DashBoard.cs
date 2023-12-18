@@ -16,6 +16,12 @@ namespace BUS03_DashBoard
         {
             _dao = dao;
         }
+
+        public override void AddBook(string title, string price, string description, string category, string image, string availability)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Task<bool> ConnectDB(string userName, string password)
         {
             throw new NotImplementedException();
@@ -26,12 +32,32 @@ namespace BUS03_DashBoard
             throw new NotImplementedException();
         }
 
+        public override void DeleteBook(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void DeleteCategory(string Name, int Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void deleteInOrderDetail(Book _book, int IDOrder)
         {
             throw new NotImplementedException();
         }
 
         public override void DeleteOrder(ElementOrder _order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void EditBook(Book editBook, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void EditCategory(Category editCat, int ID, string Name)
         {
             throw new NotImplementedException();
         }
@@ -76,6 +102,11 @@ namespace BUS03_DashBoard
             throw new NotImplementedException();
         }
 
+        public override void insertCategoryAndBook(BindingList<Category> categories, BindingList<Book> books)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Task<int> insertOrder(string _date, ElementOrder _order)
         {
             throw new NotImplementedException();
@@ -111,12 +142,42 @@ namespace BUS03_DashBoard
             return "dashb";
         }
 
+        public override BindingList<Book> readBookFile(string filePath)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override BindingList<Category> readCategoryFile(string filePath)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool SaveCategory(string CategoryName)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void SaveServerToConfig(string server, string database)
         {
             throw new NotImplementedException();
         }
 
         public override void SaveUserToConfig(string userName, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Tuple<BindingList<Book>, int> searchBook(string _sortBy, string _sortOption, string _searchText, int _currentPage, int _rowsPerPage, int _minPrice, int _maxPrice)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override BindingList<Category> selectAllCategory()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Tuple<BindingList<Book>, int> selectBookByCategory(string name, string _sortBy, string _sortOption, string _searchText, int _currentPage, int _rowsPerPage, int _minPrice, int _maxPrice)
         {
             throw new NotImplementedException();
         }

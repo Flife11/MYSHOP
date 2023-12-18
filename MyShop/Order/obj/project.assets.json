@@ -2193,16 +2193,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\THUC\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
->>>>>>> master
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
       "projectName": "Order",
       "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\Order.csproj",
@@ -2211,16 +2206,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj",
-      "projectName": "Order",
-      "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\Order.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Order\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> master
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2234,8 +2219,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
-              "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
+            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj": {
+              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj"
             }
           }
         }
@@ -2285,5 +2270,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Order\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
