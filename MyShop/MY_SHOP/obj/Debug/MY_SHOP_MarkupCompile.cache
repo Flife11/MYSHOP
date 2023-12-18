@@ -4,11 +4,16 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\obj\Debug\
+=======
+E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\MY_SHOP\obj\Debug\
+>>>>>>> master
 MY_SHOP
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\App.xaml
 31925676012
 10-1909737150
@@ -16,5 +21,14 @@ D:\Workspace\SCHOOL COURSES\Năm 3\Windows\Project1\MyShop\MY_SHOP\App.xaml
 183-392167397
 Main.xaml;MainWindow.xaml;Shop.xaml;
 
+=======
+E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\MY_SHOP\App.xaml
+31925676012
+
+71502547714
+172-2012559777
+Main.xaml;MainWindow.xaml;Shop.xaml;
+
+>>>>>>> master
 False
 
