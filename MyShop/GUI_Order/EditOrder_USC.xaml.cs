@@ -144,13 +144,14 @@ namespace GUI_Order
             DataContext = BookSelected;
         }
 
-        private void DeleteBookInOrder(object sender, RoutedEventArgs e)
+        private async void DeleteBookInOrder(object sender, RoutedEventArgs e)
         {
-            if (listProductOfOrder.SelectedItems != null)
+            if ((Book)listProductOfOrder.SelectedItem != null)
             {
                 Book _book = (Book)listProductOfOrder.SelectedItem;
+                _totalPrice = _totalPrice - _book.Price;
+                _bus.deleteInOrderDetail(_book, _order.Id);
                 _orderBooks.Remove(_book);
-                _totalPrice = _totalPrice - _book.Price * _book.Availability;
                 TotalPrice.Text = _totalPrice.ToString();
             }
         }                     

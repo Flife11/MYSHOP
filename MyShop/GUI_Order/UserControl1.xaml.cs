@@ -128,11 +128,7 @@ namespace GUI_Order
                     }
                     listOrder.ItemsSource = _listOrder;
                 }
-                if (_page._currentPage == 1)
-                {
-                    previousPage.IsEnabled = false;
-                }
-                nextPage.IsEnabled = true;
+                
             }
 
         }
@@ -163,9 +159,7 @@ namespace GUI_Order
                         _listOrder.Add(order);
                     }
                     listOrder.ItemsSource = _listOrder;
-                }
-               
-
+                }               
             }
 
         }                
