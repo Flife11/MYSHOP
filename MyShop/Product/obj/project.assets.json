@@ -1022,19 +1022,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\THUC\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj",
+      "projectUniqueName": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\Product.csproj",
       "projectName": "Product",
-      "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\Product.csproj",
-      "packagesPath": "C:\\Users\\THUC\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Product\\obj\\",
+      "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\Product.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Product\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\THUC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1048,8 +1048,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows7.0",
           "projectReferences": {
-            "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj": {
-              "projectPath": "D:\\Workspace\\SCHOOL COURSES\\Năm 3\\Windows\\Project1\\MyShop\\Enity\\Entity.csproj"
+            "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+              "projectPath": "E:\\HK1_Year3\\Window\\Projects\\MyShop\\Project_github\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
             }
           }
         }
