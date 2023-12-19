@@ -59,19 +59,12 @@ namespace GUI_Order
 
         private void EditOrderClick(object sender, RoutedEventArgs e)
         {
+            Window parentWindow = Window.GetWindow(this);
+            parentWindow.Close();
             var _editWindow = new EditOrder_GUI(_bus, _order);
             var program = new OrderPopup(_editWindow);            
             bool? _bool = program.ShowDialog();
-            Window parentWindow = Window.GetWindow(this);
-            parentWindow.Close();
-            if (_bool != null)
-            {
-
-            }
-            else
-            {
-
-            }
+           
         }
     }
 }

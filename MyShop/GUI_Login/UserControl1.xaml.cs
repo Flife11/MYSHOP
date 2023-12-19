@@ -39,6 +39,7 @@ namespace GUI_Login
             bool? remember = rememberMe.IsChecked;
 
             bool connected = await _bus.ConnectDB(userName, password);
+
             if (connected==true)
             {                
                 if (remember==true)

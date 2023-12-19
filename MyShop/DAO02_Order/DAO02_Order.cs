@@ -575,7 +575,7 @@ namespace DAO02_Order
                 command.ExecuteNonQuery();
             }
 
-            string deleteQuery = $"Delete from OrderDetail where Book={_book.Id} and [Order]= {IDOrder}";
+            string deleteQuery = $"Delete from OrderDetail  where [Book]={_book.Id} and [Order]= {IDOrder}";
 
             using (SqlCommand command = new SqlCommand(deleteQuery, connection))
             {

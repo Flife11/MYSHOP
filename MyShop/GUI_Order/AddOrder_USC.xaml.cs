@@ -89,7 +89,7 @@ namespace GUI_Order
             }
             // Lấy ngày hiện tại
             DateTime currentDate = DateTime.Now;
-            string _date = currentDate.ToString("yyyy-MM-dd HH:mm:ss");
+            string _date = currentDate.ToString("MM/dd/yyyy HH:mm:ss tt");
             ElementOrder _order = new ElementOrder()
             {
                 Id = 1,
