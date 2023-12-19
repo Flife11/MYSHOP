@@ -144,7 +144,7 @@ namespace GUI_Order
 
         private void DeleteBookInOrder(object sender, RoutedEventArgs e)
         {
-            if (listProductOfOrder.SelectedItems != null)
+            if (listProductOfOrder.SelectedItem != null)
             {
                 Book _book = (Book)listProductOfOrder.SelectedItem;
                 _orderBooks.Remove(_book);
