@@ -17,39 +17,30 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Canvas>
-
-        <materialDesign:Card Width="428" Canvas.Left="10" Canvas.Top="21" Height="553" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="140" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Image Height="140" Source="{Binding Image}" Margin="0,0,291,0" />
-                <TextBlock FontWeight="Bold" Text="{Binding Title}" Margin="144,0,0,77" TextWrapping="Wrap" FontSize="20" TextAlignment="Center" />
-                <TextBlock VerticalAlignment="Top" TextWrapping="Wrap" Margin="146,72,0,0">
-                <Run Text="ID: " FontWeight="Bold" />
-                <Run Text="{Binding ID}" />
-                <LineBreak />
-                <Run Text="Category: " FontWeight="Bold" />
-                <Run Text="{Binding Category}" />
-                <LineBreak />
-                <Run Text="Availability: " FontWeight="Bold" />
-                <Run Text="{Binding Availability}" />
-                <LineBreak />
-                <Run Text="Price: " FontWeight="Bold" />
-                <Run Text="{Binding Price}" />
-
+    <DockPanel LastChildFill="True" Width="450" Height="600">
+        <DockPanel DockPanel.Dock="Top">
+            <Image Margin="0 0 20 0" DockPanel.Dock="Left" MinWidth="150" Height="190" Source="{Binding ImageUrl}"/>
+            <DockPanel>
+                <TextBlock MinHeight="120" DockPanel.Dock="Top" FontWeight="Bold" Text="{Binding Title}" TextWrapping="Wrap" FontSize="20" TextAlignment="Center" />
+                <TextBlock TextWrapping="Wrap">
+                    <Run Text="ID: " FontWeight="Bold" />
+                    <Run Text="{Binding Id}" />
+                    <LineBreak />
+                    <Run Text="Category: " FontWeight="Bold" />
+                    <Run Text="{Binding Category}" />
+                    <LineBreak />
+                    <Run Text="Availability: " FontWeight="Bold" />
+                    <Run Text="{Binding Availability}" />
+                    <LineBreak />
+                    <Run Text="Price: " FontWeight="Bold" />
+                    <Run Text="{Binding Price}" />
                 </TextBlock>
-                <StackPanel Grid.Row="1" Margin="8,2,8,0">
-                    <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">
-                    <Run Text="{Binding Description}" />
-
-                    </TextBlock>
-                </StackPanel>
-
-            </Grid>
-        </materialDesign:Card>
-    </Canvas>
+            </DockPanel>
+        </DockPanel>
+        <StackPanel Margin="20" DockPanel.Dock="Bottom">
+            <TextBlock VerticalAlignment="Center" TextWrapping="Wrap">
+        <Run Text="{Binding Description}" />
+            </TextBlock>
+        </StackPanel>
+    </DockPanel>
 </UserControl>

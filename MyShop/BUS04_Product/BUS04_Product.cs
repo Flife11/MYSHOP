@@ -40,7 +40,7 @@ namespace BUS04_Product
         }
         public override Tuple<BindingList<Book>, int> selectBookByCategory(string name, string _sortBy, string _sortOption, string _searchText, int _currentPage,
             int _rowsPerPage, int _minPrice, int _maxPrice)
-        {
+        {            
             return _dao.selectBookByCategory(name, _sortBy, _sortOption, _searchText, _currentPage, _rowsPerPage, _minPrice, _maxPrice);
         }
         public override void DeleteCategory(string Name, int Id)

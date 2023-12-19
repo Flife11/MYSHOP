@@ -48,6 +48,11 @@ namespace Models
             set { SetProperty(ref price, value); }
             get { return price; }
         }
+        public string Description
+        {
+            set { SetProperty(ref description, value); }
+            get { return description; }
+        }
         public Book()
         {
             Id = 0;
@@ -56,9 +61,10 @@ namespace Models
             ImageUrl = string.Empty;
             Availability = 0;
             Price = 0;
+            Description = string.Empty;
         }
         // Constructor để dễ dàng tạo một đối tượng Book mới
-        public Book(int id, string title, string category, string imageUrl, int availability, double price)
+        public Book(int id, string title, string category, string imageUrl, int availability, double price, string description)
         {
             Id = id;
             Title = title;
@@ -66,13 +72,15 @@ namespace Models
             ImageUrl = imageUrl;
             Availability = availability;
             Price = price;
+            Description = description;
         }
 
         // Phương thức clone
         public Book Clone()
         {
-            return new Book(Id, Title, Category, ImageUrl, Availability, Price);
+            return new Book(Id, Title, Category, ImageUrl, Availability, Price, Description);
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

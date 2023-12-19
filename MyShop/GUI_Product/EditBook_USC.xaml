@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" TextElement.Foreground="{DynamicResource MaterialDesignBody}" TextElement.FontWeight="Regular" TextElement.FontSize="13" TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" Background="{DynamicResource MaterialDesignPaper}" FontFamily="{DynamicResource MaterialDesignFont}" 
              Loaded="Window_Loaded"
-             d:DesignHeight="450" d:DesignWidth="450">
+             d:DesignHeight="500" d:DesignWidth="450">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -18,24 +18,35 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Canvas>
-        <TextBox Name="Title_TextBox" Text="{Binding Title}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="* Enter book title" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="80" Canvas.Top="20" Height="40" Width="286" HorizontalAlignment="Center" />
-        <TextBox Name="Price_TextBox" Text="{Binding Price}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="* Enter price (example format: 55.44)" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="80" Canvas.Top="70" Height="40" Width="286" HorizontalAlignment="Center" />
-        <TextBox Name="Description_TextBox" Text="{Binding Description}" Height="78" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Description" AcceptsReturn="True" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Canvas.Left="78" Canvas.Top="128" HorizontalAlignment="Left" Width="287" />
-        <TextBlock Canvas.Left="83" Canvas.Top="235" HorizontalAlignment="Center" VerticalAlignment="Top">* Category:</TextBlock>
-        <ComboBox Name="categoriesComboBox" Width="213" Height="35" Canvas.Left="151" Canvas.Top="215" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Name}" />
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <TextBox Name="Image_TextBox" Text="{Binding Image}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Image link " Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="80" Canvas.Top="262" Height="40" Width="286" HorizontalAlignment="Center" />
-        <TextBox Name="Availability_TextBox" Text="{Binding Availability}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="* Availability " Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="80" Canvas.Top="308" Height="40" Width="286" HorizontalAlignment="Center" />
+    <Grid Width="450" Height="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox Width="400" Margin="10" Grid.Row="0" Name="Title_TextBox" Text="{Binding Title}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="* Enter book title" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40" HorizontalAlignment="Center" />
+        <TextBox Width="400" Margin="10" Grid.Row="1" Name="Price_TextBox" Text="{Binding Price}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="* Enter price (example format: 55.44)" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40" HorizontalAlignment="Center" />
+        <TextBox Width="400" Margin="10" Grid.Row="2" Name="Description_TextBox" Text="{Binding Description}" Height="100" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Description" AcceptsReturn="True" IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Center"/>
 
-        <Button Content="Save" ToolTip="Resource name: MaterialDesignRaisedLightButton" Canvas.Left="227" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top" Name="SaveBook_Button" Click="SaveBook_Button_Click" />
-        <Button Content="Close" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="144" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top" Name="CloseBook_Button" Click="CloseBook_Button_Click" />
-
-
-    </Canvas>
+        <DockPanel Width="400" Margin="10" Grid.Row="3" HorizontalAlignment="Center" >
+            <TextBlock Margin="0 0 20 0" HorizontalAlignment="Center" VerticalAlignment="Center">* Category:</TextBlock>
+            <ComboBox Name="categoriesComboBox" Width="213" Height="35" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </DockPanel>
+        <TextBox Width="400" Margin="10" Grid.Row="4" Name="Image_TextBox" Text="{Binding ImageUrl}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Image link " Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40" HorizontalAlignment="Center" />
+        <TextBox Width="400" Margin="10" Grid.Row="5" Name="Availability_TextBox" Text="{Binding Availability}" VerticalAlignment="Top" materialDesign:HintAssist.Hint="* Availability " Style="{StaticResource MaterialDesignFloatingHintTextBox}" Height="40" HorizontalAlignment="Center" />
+        <DockPanel Margin="10" Grid.Row="6" HorizontalAlignment="Center">
+            <Button Margin="0 0 10 0" Content="Save" ToolTip="Resource name: MaterialDesignRaisedLightButton" Canvas.Left="227" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top" Name="SaveBook_Button" Click="SaveBook_Button_Click" />
+            <Button Content="Close" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="144" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top" Name="CloseBook_Button" Click="CloseBook_Button_Click" />
+        </DockPanel>
+    </Grid>
 </UserControl>
