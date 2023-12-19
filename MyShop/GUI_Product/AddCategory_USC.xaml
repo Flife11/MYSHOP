@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" TextElement.Foreground="{DynamicResource MaterialDesignBody}" TextElement.FontWeight="Regular" TextElement.FontSize="13" TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" Background="{DynamicResource MaterialDesignPaper}" FontFamily="{DynamicResource MaterialDesignFont}"                         
-             d:DesignHeight="120" d:DesignWidth="240">
+             d:DesignHeight="200" d:DesignWidth="340">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -18,9 +18,15 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Canvas>
-        <TextBox Name="CategoryName_TextBox" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Enter new category name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Width="153" Canvas.Left="45" Canvas.Top="21" />
-        <Button Content="Add" ToolTip="Resource name: MaterialDesignRaisedLightButton" Canvas.Left="131" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SaveCategory_Button" Click="SaveCategory_Button_Click" />
-        <Button Content="Close" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="48" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CloseCategory_Button" Click="CloseCategory_Button_Click" />
-    </Canvas>
+    <Grid Height="170" Width="300">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox FontSize="20" Name="CategoryName_TextBox" VerticalAlignment="Center" materialDesign:HintAssist.Hint="Enter new category name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Center" Width="auto"/>
+        <DockPanel Margin="10" Grid.Row="1" HorizontalAlignment="Center">
+            <Button Content="Add" ToolTip="Resource name: MaterialDesignRaisedLightButton" Canvas.Left="131" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Name="SaveCategory_Button" Click="SaveCategory_Button_Click" />
+            <Button Content="Close" ToolTip="Resource name: MaterialDesignRaisedLightButton" Background="Red" Canvas.Left="48" Canvas.Top="75" HorizontalAlignment="Left" VerticalAlignment="Center" Name="CloseCategory_Button" Click="CloseCategory_Button_Click" />
+        </DockPanel>
+    </Grid>
 </UserControl>

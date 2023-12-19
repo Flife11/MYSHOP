@@ -33,8 +33,8 @@ namespace MY_SHOP
             var control = _gui.GetMainWindow();
 
             Content.Children.Add(control);
-            Content.Width = control.Width;
-            Content.Height = control.Height;
+            //Content.Width = control.Width;
+            //Content.Height = control.Height;
 
             MainWindow.DataContext = control;
         }

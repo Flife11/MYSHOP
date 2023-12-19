@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI_Product"
         mc:Ignorable="d"
-        Title="" Height="{Binding Path=Height}" Width="{Binding Path=Width}" Name="MainWindow" Loaded="Window_Loaded" Closed="Window_Closed" >
+        SizeToContent="WidthAndHeight"
+        Title="" Name="MainWindow" Loaded="Window_Loaded" Closed="Window_Closed" >
     <Grid Name="Content">
-
 
     </Grid>
 </Window>

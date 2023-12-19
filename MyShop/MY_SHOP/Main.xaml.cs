@@ -45,8 +45,8 @@ namespace MY_SHOP
                 if (nav=="product") { tmp = Product; }
 
                 tmp.Children.Add(control);
-                tmp.Width = control.Width;
-                tmp.Height = control.Height;
+                //tmp.Width = control.Width;
+                //tmp.Height = control.Height;
 
                 tmp.DataContext = control;
             }            

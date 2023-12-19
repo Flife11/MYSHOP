@@ -53,6 +53,7 @@ namespace GUI_Product
             _categories.Clear();
             var data = _bus.selectAllCategory();
             _categories = data;
+            CategoryListBox.ItemsSource = _categories;
         }
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {            
@@ -235,8 +236,9 @@ namespace GUI_Product
             var data = _bus.selectBookByCategory(name, _sortBy, _sortOption, _searchText, _currentPage, _rowsPerPage, _minPrice, _maxPrice);
             int count = data.Item2;
             _books = data.Item1;
+            booksListView.ItemsSource = _books.ToArray();
 
-            if (count != _totalItems)
+           if (count != _totalItems)
             {
                 _totalItems = count;
                 _totalPages = (_totalItems / _rowsPerPage) +
@@ -286,8 +288,6 @@ namespace GUI_Product
 
             searchBook();
             booksListView.ItemsSource = _books;
-
-
         }
 
         private void Book_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -336,6 +336,7 @@ namespace GUI_Product
             if (screen.ShowDialog().Value == true)
             {
                 //_bus.EditCategory();
+                selectAllCategory();
             }
             else
             {
@@ -356,6 +357,8 @@ namespace GUI_Product
             _bus.DeleteBook(selectedBook.Id);            
 
             _books.Remove(selectedBook);
+            booksListView.ItemsSource = _books;
+
         }
         private void EditBook_Button_Click(object sender, RoutedEventArgs e)
         {

@@ -22,7 +22,7 @@ namespace GUI_Product
         }
         public override IGUI CreateNew(IBus bus)
         {
-            return new EditCategory_GUI(_bus, _category);
+            return new EditCategory_GUI(bus, _category);
         }
 
         public override UserControl GetMainWindow()

@@ -13,50 +13,38 @@
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
 
-        Title="Main" Height="600" Width="1000" Loaded="Window_Loaded" Closed="Window_Closed" >
+        Title="Main" Height="700" Width="1300" Loaded="Window_Loaded" Closed="Window_Closed" >
     <DockPanel>
         <materialDesign:Card>
             <TabControl
     materialDesign:ColorZoneAssist.Mode="Standard"
     materialDesign:ElevationAssist.Elevation="Dp0"
     Style="{StaticResource MaterialDesignNavigationRailTabControl}">
-                <TabItem>
+                <TabItem Width="100">
                     <TabItem.Header>
-                        <StackPanel
-          Width="auto"
-          Height="auto">
-                            <TextBlock
-            HorizontalAlignment="Center"
-            Text="Dashboard" />
-                        </StackPanel>
+                        <TextBlock
+HorizontalAlignment="Center"
+Text="Dashboard" />
                     </TabItem.Header>
                     <Grid Name="Dashboard" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
 
                     </Grid>
                 </TabItem>
-                <TabItem>
+                <TabItem Width="100">
                     <TabItem.Header>
-                        <StackPanel
-          Width="auto"
-          Height="auto">
-                            <TextBlock
-            HorizontalAlignment="Center"
-            Text="Product" />
-                        </StackPanel>
+                        <TextBlock
+HorizontalAlignment="Center"
+Text="Product" />
                     </TabItem.Header>
                     <Grid Name="Product" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
 
                     </Grid>
-                </TabItem>
-                <TabItem>
+                </TabItem >
+                <TabItem Width="100">
                     <TabItem.Header>
-                        <StackPanel
-          Width="auto"
-          Height="auto">
-                            <TextBlock
-            HorizontalAlignment="Center"
-            Text="Order" />
-                        </StackPanel>
+                        <TextBlock
+HorizontalAlignment="Center"
+Text="Order" />
                     </TabItem.Header>
                     <Grid Name="Order" Height="{Binding Path=Height}" Width="{Binding Path=Width}">
 
