@@ -163,9 +163,7 @@ namespace GUI_Order
                         _listOrder.Add(order);
                     }
                     listOrder.ItemsSource = _listOrder;
-                }
-               
-
+                }               
             }
 
         }                
