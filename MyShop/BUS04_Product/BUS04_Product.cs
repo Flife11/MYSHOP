@@ -172,6 +172,24 @@ namespace BUS04_Product
             throw new NotImplementedException();
         }
 
-        
+        public override BindingList<Book> SoldingOutPr_Lv()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<string> LoadDashInfor()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Tuple<string, List<string>, List<float>> ChartInfor(DateTime? _beginDate, DateTime? _endDate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Tuple<List<string>, List<int>> BooksAndQuantity()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

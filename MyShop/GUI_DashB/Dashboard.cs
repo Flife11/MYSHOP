@@ -22,7 +22,7 @@ namespace GUI_DashB
 
         public override UserControl GetMainWindow()
         {
-            throw new NotImplementedException();
+            return new UserControl1(_bus);
         }
 
         public override string Name()

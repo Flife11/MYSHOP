@@ -677,5 +677,25 @@ namespace DAO02_Order
         {
             throw new NotImplementedException();
         }
+
+        public override BindingList<Book> SoldingOutPr_Lv()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<string> LoadDashInfor(DateTime curDate, DateTime beginMonth_Date, DateTime previousMonday)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Tuple<List<string>, List<float>> ChartInfor(DateTime? _beginDate, DateTime? _endDate, TimeSpan? dateDiff)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Tuple<List<string>, List<int>> BooksAndQuantity()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

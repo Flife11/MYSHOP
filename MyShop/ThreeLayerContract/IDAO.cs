@@ -49,6 +49,14 @@ namespace ThreeLayerContract
         public abstract void EditBook(Book editBook, int id);
         public abstract void DeleteBook(int Id);
         public abstract void EditCategory(Category editCat, int ID, string Name);
+        /// <summary>
+        /// Dashboard function
+        /// </summary>
+        /// <returns></returns>
+        public abstract BindingList<Book> SoldingOutPr_Lv();
+        public abstract List<String> LoadDashInfor(DateTime curDate, DateTime beginMonth_Date, DateTime previousMonday);
+        public abstract Tuple<List<string>, List<float>> ChartInfor(DateTime? _beginDate, DateTime? _endDate, TimeSpan? dateDiff);
+        public abstract Tuple<List<string>, List<int>> BooksAndQuantity();
         public abstract string Name();
     }
 }
