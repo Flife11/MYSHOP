@@ -42,21 +42,21 @@ namespace GUI_DashB
             // data trả về lần luot là rowsCount, weekCount, monthCount
             var data = _bus.LoadDashInfor();
 
-            curProduct_tb.Text = data[0];
+            //curProduct_tb.Text = data[0];
 
-            sumWeek_tb.Text = data[1];
+            //sumWeek_tb.Text = data[1];
 
-            sumMonth_tb.Text = data[2];
+            //sumMonth_tb.Text = data[2];
 
-            //Sách sắp hết hàng
-            var books = _bus.SoldingOutPr_Lv();                     
-            SoldingOutPr_Lv.ItemsSource = books;
+            ////Sách sắp hết hàng
+            //var books = _bus.SoldingOutPr_Lv();                     
+            //SoldingOutPr_Lv.ItemsSource = books;
         }
         private void drawChart_btn(object sender, RoutedEventArgs e)
         {
-            DateTime? _beginDate = beginDate.SelectedDate;
-            DateTime? _endDate = endDate.SelectedDate;
-            var data = _bus.ChartInfor(_beginDate, _endDate);
+            //DateTime? _beginDate = beginDate.SelectedDate;
+            //DateTime? _endDate = endDate.SelectedDate;
+            //var data = _bus.ChartInfor(_beginDate, _endDate);
 
             /*ViewModel.XAxes[0].Name = data.Item1;
             ViewModel.Series[0].Values = data.Item2.ToArray();
