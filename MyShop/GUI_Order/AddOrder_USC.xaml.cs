@@ -148,7 +148,7 @@ namespace GUI_Order
             {
                 Book _book = (Book)listProductOfOrder.SelectedItem;
                 _orderBooks.Remove(_book);
-                _totalPrice = _totalPrice - _book.Price * _book.Availability;
+                _totalPrice = _totalPrice - _book.Price;
                 TotalPrice.Text = _totalPrice.ToString();
             }
         }                        
