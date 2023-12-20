@@ -22,7 +22,7 @@ namespace MY_SHOP
     public partial class Main : Window
     {
         IGUI _gui;
-        List<string> navbar = new List<string>() {"product", "order" };
+        List<string> navbar = new List<string>() {"product", "order", "dashb" };
         public Main()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace MY_SHOP
 
                 var control = gui.GetMainWindow();
                 var tmp = Dashboard;
-                if (nav=="dahsb") { tmp = Dashboard; }
+                if (nav=="dashb") { tmp = Dashboard; }
                 if (nav=="order") { tmp = Order; }
                 if (nav=="product") { tmp = Product; }
 

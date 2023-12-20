@@ -31,6 +31,7 @@ namespace GUI_DashBoard
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new ViewModel();
         }
         BindingList<Book> books;
         private void Window_Loaded(object sender, RoutedEventArgs e)

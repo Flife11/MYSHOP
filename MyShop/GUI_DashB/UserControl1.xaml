@@ -4,11 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GUI_DashB"
-             mc:Ignorable="d" 
-             
+             mc:Ignorable="d"
              xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:materialDesignPack="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:local1="clr-namespace:GUI_DashBoard"
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                TextElement.FontWeight="Regular"
+                TextElement.FontSize="13"
+                TextOptions.TextFormattingMode="Ideal"
+                TextOptions.TextRenderingMode="Auto"
+                Background="{DynamicResource MaterialDesignPaper}"
+                FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="700" d:DesignWidth="1200">
     <UserControl.Resources>
         <ResourceDictionary>
@@ -20,11 +25,6 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    
-    <UserControl.DataContext>
-        <local:UserControl1.ViewModel/>
-    </UserControl.DataContext>
-    
     <Grid Margin="100 0 0 0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
@@ -106,7 +106,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="{Binding Image}" Width="60" Height="100" Margin="10"/>
+                                <Image Source="{Binding ImageUrl}" Width="60" Height="100" Margin="10"/>
                                 <StackPanel VerticalAlignment="Center" MaxWidth="170">
                                     <TextBlock TextWrapping="Wrap" Text="{Binding Title}"  FontWeight="Bold" Margin="0 20" Width="auto"/>
                                     <TextBlock Text="{Binding Category}" Foreground="Blue"/>

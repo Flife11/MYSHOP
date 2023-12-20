@@ -316,9 +316,61 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BUS01_Login\BUS01_Login.csproj">
+      <Project>{28c1ecf7-3f7b-4b68-85da-75dfeda83358}</Project>
+      <Name>BUS01_Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BUS02_Order\BUS02_Order.csproj">
+      <Project>{a1c6a480-30c2-4a98-81e8-278961543716}</Project>
+      <Name>BUS02_Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BUS03_DashBoard\BUS03_DashBoard.csproj">
+      <Project>{c91605fe-fa36-45cd-b3d0-673088ff8c8c}</Project>
+      <Name>BUS03_DashBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BUS04_Product\BUS04_Product.csproj">
+      <Project>{15ca2678-51ed-4002-8455-83c3bde7f5b6}</Project>
+      <Name>BUS04_Product</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO01_Login\DAO01_Login.csproj">
+      <Project>{d5db2ba7-1fe3-4398-8e6c-00199212159e}</Project>
+      <Name>DAO01_Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO02_Order\DAO02_Order.csproj">
+      <Project>{e442a2dc-2bef-4709-a9c0-8db7dbc6794b}</Project>
+      <Name>DAO02_Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO03_DashBoard\DAO03_DashBoard.csproj">
+      <Project>{17ee74aa-fce8-400f-932d-201089fc3972}</Project>
+      <Name>DAO03_DashBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO04_Product\DAO04_Product.csproj">
+      <Project>{48a44afd-24d6-44e1-8cfa-a94f272043ae}</Project>
+      <Name>DAO04_Product</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Enity\Entity.csproj">
       <Project>{09e8a055-d466-4cad-99f4-6c0cfeafe3ea}</Project>
       <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI_DashB\GUI_DashB.csproj">
+      <Project>{89f42230-08df-4a54-a018-40315ef8121a}</Project>
+      <Name>GUI_DashB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI_Login\GUI_Login.csproj">
+      <Project>{eaf8c303-839e-4c7a-b3b4-0ef91775e19d}</Project>
+      <Name>GUI_Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI_Order\GUI_Order.csproj">
+      <Project>{da6c33f0-f2ee-4afd-9185-dab11daff37c}</Project>
+      <Name>GUI_Order</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GUI_Product\GUI_Product.csproj">
+      <Project>{4f89a3de-5a89-46da-88be-10534057bfcc}</Project>
+      <Name>GUI_Product</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{e5c4cb3c-abc1-4af8-b22e-b30a965bd314}</Project>
+      <Name>Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\ThreeLayerContract\ThreeLayerContract.csproj">
       <Project>{C489B275-4D99-4E65-B0DB-B172944E6840}</Project>

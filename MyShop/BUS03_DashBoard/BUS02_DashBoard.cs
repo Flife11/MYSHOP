@@ -71,7 +71,7 @@ namespace BUS03_DashBoard
 
         public override IBus CreateNew(IDAO dao)
         {
-            throw new NotImplementedException();
+            return new BUS02_DashBoard(dao);
         }
 
         public override void DeleteBook(int Id)

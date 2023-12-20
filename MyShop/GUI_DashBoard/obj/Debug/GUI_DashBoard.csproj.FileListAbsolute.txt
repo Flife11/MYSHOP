@@ -33,7 +33,6 @@ D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\Microsoft.Xaml.Behavio
 D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\obj\Debug\GUI_DashBoard.csproj.CopyComplete
 D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\Enity.dll
 D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\Enity.pdb
-D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\obj\Debug\GUI_DashBoard_Content.g.cs
 D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\libHarfBuzzSharp.dylib
 D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\x86\libHarfBuzzSharp.dll
@@ -248,3 +247,8 @@ E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\GUI_DashBoard\o
 E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\GUI_DashBoard\obj\Debug\GUI_DashBoard.csproj.CopyComplete
 E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\GUI_DashBoard\obj\Debug\GUI_DashBoard.exe
 E:\HK1_Year3\Window\Projects\MyShop\Project_github\MYSHOP\MyShop\GUI_DashBoard\obj\Debug\GUI_DashBoard.pdb
+D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\ThreeLayerContract.dll
+D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\Models.dll
+D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\Enity.dll.config
+D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\ThreeLayerContract.pdb
+D:\Workspace\Window\MYSHOP\MyShop\GUI_DashBoard\bin\Debug\Models.pdb

@@ -8,16 +8,16 @@ using ThreeLayerContract;
 
 namespace GUI_DashB
 {
-    class Dashboard : IGUI
+    class newClass : IGUI
     {
-        public Dashboard() { }
-        public Dashboard(IBus bus)
+        public newClass() { }
+        public newClass(IBus bus)
         {
             _bus = bus;
         }
         public override IGUI CreateNew(IBus bus)
         {
-            throw new NotImplementedException();
+            return new newClass(bus);
         }
 
         public override UserControl GetMainWindow()

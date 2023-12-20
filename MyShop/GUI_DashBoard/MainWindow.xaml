@@ -16,9 +16,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="700" Width="1200" Loaded="Window_Loaded">
 
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <local:ViewModel/>
-    </Window.DataContext>
+    </Window.DataContext>-->
 
     <Grid Margin="100 0 0 0">
         <Grid.ColumnDefinitions>
