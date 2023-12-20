@@ -17,9 +17,9 @@ namespace BUS03_DashBoard
         {
             _dao = dao;
         }
-        public override Tuple<List<string>, List<int>> BooksAndQuantity()
+        public override Tuple<List<string>, List<int>> BooksAndQuantity(DateTime? _begin, DateTime? _end)
         {
-            return _dao.BooksAndQuantity();
+            return _dao.BooksAndQuantity(_begin, _end);
         }
         public override Tuple<string, List<string>, List<float>> ChartInfor(DateTime? _beginDate, DateTime? _endDate)
         {

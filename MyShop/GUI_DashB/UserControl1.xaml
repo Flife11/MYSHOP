@@ -14,7 +14,7 @@
                 TextOptions.TextRenderingMode="Auto"
                 Background="{DynamicResource MaterialDesignPaper}"
                 FontFamily="{DynamicResource MaterialDesignFont}"
-             d:DesignHeight="700" d:DesignWidth="1200">
+             d:DesignHeight="700" d:DesignWidth="1200" Loaded="Window_Loaded">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
