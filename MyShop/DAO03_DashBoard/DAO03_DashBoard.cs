@@ -14,13 +14,16 @@ namespace DAO03_DashBoard
 {
     public class DAO03_DashBoard : IDAO
     {
-        public override Tuple<List<string>, List<int>> BooksAndQuantity()
+        public override Tuple<List<string>, List<int>> BooksAndQuantity(DateTime? _beginDate, DateTime? _endDate)
         {
             var command = new SqlCommand();
             command.Connection = DB.Instance.Connection;
+            command.Parameters.Add("@beginDate", System.Data.SqlDbType.DateTime);
+            command.Parameters.Add("@endDate", System.Data.SqlDbType.DateTime);
+            command.Parameters["@beginDate"].Value = _beginDate.Value.ToShortDateString();
+            command.Parameters["@endDate"].Value = _endDate.Value.ToShortDateString();
             command.CommandText = "select Category, count(*) as quantity\r\nfrom book join OrderDetail on book.ID = OrderDetail.Book join [Order] on OrderDetail.[Order] = [Order].ID\r\nwhere [Date] > @beginDate and [Date] < @endDate\r\ngroup by Category";
             SqlDataReader reader = command.ExecuteReader();
-            reader = command.ExecuteReader();
             if (reader.HasRows)
             {
                 List<string> stringValues = new List<string>();
@@ -32,8 +35,8 @@ namespace DAO03_DashBoard
                     stringValues.Add(key);
                     intValues.Add(value);
                 }
-                return Tuple.Create(stringValues, intValues);
                 reader.Close();
+                return Tuple.Create(stringValues, intValues);
             }
             reader.Close();
             return Tuple.Create(new List<string>(), new List<int>());

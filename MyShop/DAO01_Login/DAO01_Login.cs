@@ -265,7 +265,7 @@ namespace DAO01_Login
             throw new NotImplementedException();
         }
 
-        public override Tuple<List<string>, List<int>> BooksAndQuantity()
+        public override Tuple<List<string>, List<int>> BooksAndQuantity(DateTime? _begin, DateTime? _end)
         {
             throw new NotImplementedException();
         }

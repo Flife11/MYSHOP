@@ -52,7 +52,7 @@ namespace ThreeLayerContract
         public abstract BindingList<Book> SoldingOutPr_Lv();
         public abstract List<String> LoadDashInfor();
         public abstract Tuple<string, List<string>, List<float>> ChartInfor(DateTime? _beginDate, DateTime? _endDate);
-        public abstract Tuple<List<string>, List<int>> BooksAndQuantity();
+        public abstract Tuple<List<string>, List<int>> BooksAndQuantity(DateTime? _begin, DateTime? _end);
         public abstract string Name();
     }
 }
