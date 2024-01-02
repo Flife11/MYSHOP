@@ -135,7 +135,7 @@ namespace Product
             var books = new BindingList<book>();
 
             //Doc category
-            string filePath = @"..\..\..\..\..\Category.csv"; //cho nay sua sau
+            string filePath = @"..\Category.csv"; //cho nay sua sau
             using (StreamReader sr = new StreamReader(filePath))
             {
                 bool isFirstRow = true;
@@ -158,7 +158,7 @@ namespace Product
             }
 
             //Doc book
-            filePath = @"..\..\..\..\..\book.csv";
+            filePath = @"..\book.csv";
 
             using (StreamReader sr2 = new StreamReader(filePath))
             {

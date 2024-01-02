@@ -1,19 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj": {}
+    "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Product\\Product.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+    "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
+        "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Enity\\Entity.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "D:\\Workspace\\Window\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
-                "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
+              "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+                "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj"
               }
             }
           }
@@ -23,11 +23,11 @@
         "net48": {}
       }
     },
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Models\\Models.csproj": {
+    "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Models\\Models.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Models\\Models.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -38,17 +38,17 @@
         "net48": {}
       }
     },
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj": {
+    "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Product\\Product.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj",
+        "projectUniqueName": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Product\\Product.csproj",
         "projectName": "Product",
-        "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\Product.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Product\\obj\\",
+        "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Product\\Product.csproj",
+        "packagesPath": "C:\\Users\\this pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Product\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\this pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,8 +62,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows7.0",
             "projectReferences": {
-              "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
-                "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
+              "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Enity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Enity\\Entity.csproj"
               }
             }
           }
@@ -72,40 +72,11 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "default"
         }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows7.0",
-          "dependencies": {
-            "DocumentFormat.OpenXml": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "MaterialDesignColors": {
-              "target": "Package",
-              "version": "[2.1.4, )"
-            },
-            "MaterialDesignThemes": {
-              "target": "Package",
-              "version": "[4.9.0, )"
-            },
-            "MaterialDesignThemes.MahApps": {
-              "target": "Package",
-              "version": "[0.3.0, )"
-            },
-            "PropertyChanged.Fody": {
-              "target": "Package",
-              "version": "[4.1.0, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -117,28 +88,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Workspace\\Window\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
+    "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj": {
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "projectUniqueName": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
         "projectName": "ThreeLayerContract",
-        "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
+        "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\ThreeLayerContract\\ThreeLayerContract.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {
-              "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Models\\Models.csproj": {
-                "projectPath": "D:\\Workspace\\Window\\MYSHOP\\MyShop\\Models\\Models.csproj"
+              "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\this pc\\source\\repos\\MYSHOP\\MyShop\\Models\\Models.csproj"
               }
             }
           }
