@@ -72,11 +72,11 @@ namespace GUI_Product
             var books = new BindingList<Book>();
 
             //Doc category
-            string filePath = @"..\..\..\..\..\Category.csv"; //cho nay sua sau
+            string filePath = @"..\..\..\..\Category.csv"; //cho nay sua sau
             categories = _bus.readCategoryFile(filePath);
 
             //Doc book
-            filePath = @"..\..\..\..\..\book.csv";
+            filePath = @"..\..\..\..\book.csv";
             books = _bus.readBookFile(filePath);
 
             //insert
