@@ -620,3 +620,7 @@ C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.Cor
 C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.csproj.CopyComplete
 C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.exe
 C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.pdb
+C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\bin\Debug\MY_SHOP.exe.manifest
+C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\bin\Debug\MY_SHOP.application
+C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.exe.manifest
+C:\Users\this pc\source\repos\MYSHOP\MyShop\MY_SHOP\obj\Debug\MY_SHOP.application
